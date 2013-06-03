@@ -1,0 +1,236 @@
+// Titillium
+@include font-face("ttl", font-files("TitilliumText22L002-webfont.woff", "TitilliumText22L002-webfont.ttf", "TitilliumText22L002-webfont.svg", "TitilliumText22L002-webfont.eot"));
+@include font-face("ttr", font-files("TitilliumText22L003-webfont.woff", "TitilliumText22L003-webfont.ttf", "TitilliumText22L003-webfont.svg", "TitilliumText22L003-webfont.eot"));
+@include font-face("ttb", font-files("TitilliumText22L005-webfont.woff", "TitilliumText22L005-webfont.ttf", "TitilliumText22L005-webfont.svg", "TitilliumText22L005-webfont.eot"));
+
+// Icons
+@include font-face("wise-icons", font-files("wise-icons.woff", "wise-icons.ttf", "wise-icons.svg", "wise-icons.eot"));
+
+/*@font-face {
+  font-family: 'wise-font';
+  src:url('fonts/wise-font.eot');
+  src:url('fonts/wise-font.eot?#iefix') format('embedded-opentype'),
+    url('fonts/wise-font.woff') format('woff'),
+    url('fonts/wise-font.ttf') format('truetype'),
+    url('fonts/wise-font.svg#wise-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'wise-icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon {
+  font-family: 'wise-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-home:before {
+  content: "\e000";
+}
+.icon-file:before {
+  content: "\e001";
+}
+.icon-cog:before {
+  content: "\e003";
+}
+.icon-facebook:before {
+  content: "\e002";
+}
+.icon-thumbs-up:before {
+  content: "\e004";
+}
+.icon-bubble:before {
+  content: "\e005";
+}
+.icon-forward:before {
+  content: "\e006";
+}
+.icon-copy:before {
+  content: "\e007";
+}
+.icon-locked:before {
+  content: "\e008";
+}
+.icon-search:before {
+  content: "\e00a";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-speech:before {
+  content: "\e009";
+}
+.icon-calendar:before {
+  content: "\e00b";
+}
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+.icon-user-2-add:before {
+  content: "\e00c";
+}
+.icon-user-4-add:before {
+  content: "\e00d";
+}
+.icon-tick:before {
+  content: "\e00e";
+}
+.icon-star:before {
+  content: "\e00f";
+}
+.icon-star-2:before {
+  content: "\e010";
+}
+.icon-video:before {
+  content: "\e011";
+}
+.icon-users:before {
+  content: "\e012";
+}
+.icon-tag:before {
+  content: "\e013";
+}
+.icon-speech-bubble-right:before {
+  content: "\e015";
+}
+.icon-spam:before {
+  content: "\e016";
+}
+.icon-pencil:before {
+  content: "\e018";
+}
+.icon-pen:before {
+  content: "\e019";
+}
+.icon-outgoing:before {
+  content: "\e01a";
+}
+.icon-notes:before {
+  content: "\e01b";
+}
+.icon-mixer:before {
+  content: "\e01c";
+}
+.icon-menu:before {
+  content: "\e01d";
+}
+.icon-list:before {
+  content: "\e01e";
+}
+.icon-list-2:before {
+  content: "\e01f";
+}
+.icon-image:before {
+  content: "\e020";
+}
+.icon-flag:before {
+  content: "\e021";
+}
+.icon-delete:before {
+  content: "\e022";
+}
+.icon-compass:before {
+  content: "\e023";
+}
+.icon-compose-4:before {
+  content: "\e024";
+}
+.icon-clock:before {
+  content: "\e025";
+}
+.icon-calendar-2:before {
+  content: "\e026";
+}
+.icon-asterisk:before {
+  content: "\e027";
+}
+.icon-arrow-right:before {
+  content: "\e028";
+}
+.icon-arrow-left:before {
+  content: "\e029";
+}
+.icon-add:before {
+  content: "\e02a";
+}
+.icon-speech-bubble-left-4:before {
+  content: "\e02b";
+}
+.icon-speech-bubble-left-2:before {
+  content: "\e02c";
+}
+.icon-search-2:before {
+  content: "\e02d";
+}
+.icon-remove:before {
+  content: "\e017";
+}
+.icon-link:before {
+  content: "\e02e";
+}
+.icon-home-2:before {
+  content: "\e02f";
+}
+.icon-heart-empty-2:before {
+  content: "\e030";
+}
+.icon-heart-full:before {
+  content: "\e031";
+}
+.icon-document:before {
+  content: "\e032";
+}
+.icon-document-add:before {
+  content: "\e033";
+}
+.icon-cross:before {
+  content: "\e034";
+}
+.icon-bin-3:before {
+  content: "\e035";
+}
+.icon-attachment-2:before {
+  content: "\e036";
+}
+.icon-arrow-down:before {
+  content: "\e037";
+}
+.icon-arrow-up:before {
+  content: "\e038";
+}
+.icon-alarm-clock:before {
+  content: "\e039";
+}
+.icon-twitter:before {
+  content: "\e03a";
+}
+.icon-flask-full:before {
+  content: "\e03b";
+}
+.icon-radio-checked:before {
+  content: "\e014";
+}
+.icon-radio-unchecked:before {
+  content: "\e03c";
+}
