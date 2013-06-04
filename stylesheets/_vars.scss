@@ -75,14 +75,18 @@ $english-quotes: true;
  */
 
 // Wisemetrics colors
-$pink:                  #DE438A;
-$headline:              #A56E8A;
-$titles:                #5D5356;
-$titles-small:          #BCBDC3;
-$text:                  #818285;
-$background-page:       #EBECEF;
-$background-section:    #FFF;
-$background-testimonial:#2A2A2A;
-$background-nav:        #5D5356;
-$background-features:   #F3F4F8;
-$background-footer:     rgb(62,38,55);
+$pink:                  #DE438A!default;
+$violet:                #5d4b95!default;
+$headline:              #A56E8A!default;
+$light-grey:            #dddde1!default;
+$titles:                #5D5356!default;
+$titles-small:          #BCBDC3!default;
+$text:                  #818285!default;
+$nav:                   #8c8d92!default;
+$background-page:       #EBECEF!default;
+$background-section:    #FFFFFF!default;
+$background-testimonial:#2A2A2A!default;
+$background-header:     #3f4041!default;
+$background-nav:        #5D5356!default;
+$background-features:   #F3F4F8!default;
+$background-footer:     #3e2637!default;
