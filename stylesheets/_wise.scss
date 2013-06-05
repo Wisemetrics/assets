@@ -1,0 +1,118 @@
+/* Wisemetrics products global stylesheet */
+@import "compass";
+@import "vars";
+@import "inuit.css/inuit";
+@import "fonts";
+
+/* Wise components */
+@if ($use-sidenav == true) {
+  .sidenav {
+    font-size: 11px;
+    margin-bottom: 0;
+    line-height: 30px;
+    padding-left: 30px;
+    a {
+      position: relative;
+      text-decoration: none;
+    }
+    > li {
+      > a {
+        line-height: 50px;
+        text-transform: uppercase;
+      }
+      ul {
+        border-top: 1px solid $nav-header;
+        padding: 20px 0;
+      }
+      li {
+        a {
+          color: $text;
+        }
+        &.current {
+          a {
+            color: $titles;
+            font-family: ttb;
+            &:before {
+              display: block;
+              content: "";
+              position: absolute;
+              right: -7px;
+              top: 50%;
+              margin-top: -5px;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 5px 0 5px 7px;
+              // border-color: transparent transparent transparent lighten($pink,47%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pink {
+  color: $pink;
+  a {
+    color: $pink;
+    i {
+      background: $pink;
+    }
+  }
+  .current {
+    background: lighten($pink,47%);
+    .current a:before {
+      border-color: transparent transparent transparent lighten($pink,47%);
+    }
+  }
+}
+
+.green {
+  color: $green;
+  a {
+    color: $green;
+    i {
+      background: $green;
+    }
+  }
+  .current {
+    background: lighten($green,50%);
+    .current a:before {
+      border-color: transparent transparent transparent lighten($green,50%);
+    }
+  }
+}
+
+.orange {
+  color: $orange;
+  a {
+    color: $orange;
+    i {
+      background: $orange;
+    }
+  }
+  .current {
+    background: lighten($orange,45%);
+    .current a:before {
+      border-color: transparent transparent transparent lighten($orange,45%);
+    }
+  }
+}
+
+.blue {
+  color: $blue;
+  a {
+    color: $blue;
+    i {
+      background: $blue;
+    }
+  }
+  .current {
+    background: lighten($blue,50%);
+    .current a:before {
+      border-color: transparent transparent transparent lighten($blue,50%);
+    }
+  }
+}
+

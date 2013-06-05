@@ -6,6 +6,18 @@
 // Icons
 @include font-face("wise-icons", font-files("wise-icons.woff", "wise-icons.ttf", "wise-icons.svg", "wise-icons.eot"));
 
+// Font declaration
+
+@if ($use-titillium-font == true) {
+  body {
+    font-family: ttr, Helvetica, Arial, sans-serif;
+  }
+  strong, b, h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family: ttb;
+  }
+}
+
 /*@font-face {
   font-family: 'wise-font';
   src:url('fonts/wise-font.eot');
@@ -233,4 +245,22 @@ you can use the generic selector below, but it's slower:
 }
 .icon-radio-unchecked:before {
   content: "\e03c";
+}
+.icon-bars:before {
+  content: "\e03d";
+}
+.icon-link-2:before {
+  content: "\e03e";
+}
+.icon-cog-2:before {
+  content: "\f013";
+}
+.icon-globe:before {
+  content: "\f0ac";
+}
+.icon-trophy:before {
+  content: "\f091";
+}
+.icon-profile:before {
+  content: "\e040";
 }
