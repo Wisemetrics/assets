@@ -75,11 +75,13 @@ $english-quotes: true;
  */
 
 $use-titillium-font:    true!default;
-$use-sidenav:       true!default;
+$use-sidenav:           true!default;
 $left-col-width:        180px!default;
 $content-min-width:     800px!default;
 
 // Wisemetrics colors
+$black:                 #000;
+$white:                 #FFF;
 $pink:                  #ff008d!default;
 $violet:                #5d4b95!default;
 $orange:                #DD5623!default;
@@ -93,7 +95,7 @@ $text:                  #818285!default;
 $nav:                   #8c8d92!default;
 $nav-header:            #ABABAB!default;
 $background-page:       #EBECEF!default;
-$background-section:    #FFFFFF!default;
+$background-section:    $white!default;
 $background-testimonial:#2A2A2A!default;
 $background-header:     #353535!default;
 $background-nav:        #5D5356!default;
@@ -101,3 +103,6 @@ $background-nav-enabled:#474747!default;
 $background-features:   #F3F4F8!default;
 $background-footer:     #3e2637!default;
 $background-orange:     #e9e4e4!default;
+
+$baseBorderRadius:      0;
+$brand-round:           0;

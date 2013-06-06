@@ -178,9 +178,11 @@ you can use the generic selector below, but it's slower:
   content: "\e027";
 }
 .icon-arrow-right:before {
+  @extend .icon;
   content: "\e028";
 }
 .icon-arrow-left:before {
+  @extend .icon;
   content: "\e029";
 }
 .icon-add:before {
