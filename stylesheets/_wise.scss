@@ -4,7 +4,21 @@
 @import "inuit.css/inuit";
 @import "fonts";
 
-/* Wise components */
+/***
+  Wise components
+***/
+
+// Display helpers
+.block {
+  display: block !important;
+}
+.inline {
+  display: inline !important;
+}
+.inline-block {
+  @include inline-block;
+}
+
 @if ($use-sidenav == true) {
   .sidenav {
     font-size: 11px;
