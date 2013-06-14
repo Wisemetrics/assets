@@ -1,5 +1,50 @@
 @if ($use-backgrid == true) {
   .backgrid {
+    @include table-scaffolding;
+    background: $white;
+    font-size: $h6-size;
+    border-collapse: collapse;
+    th {
+      &:first-child {
+        text-align: right;
+      }
+      background: $light-grey;
+      text-transform: uppercase;
+    }
+    td {
+      &:first-child {
+        text-align: left;
+      }
+    }
+    thead {
+      border-style: solid;
+      border-color: $light-grey;
+      border-width: 0 10px;
+      a {
+        display: block;
+        padding: 1.7em 0;
+        cursor: pointer;
+      }
+    }
+    tbody {
+      border-style: solid;
+      border-color: $white;
+      border-width: 0 10px 10px;
+    }
+    th,td {
+      text-align: center;
+      padding: .7em;
+      color: $text;
+      border-right: 1px solid $titles-small;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    tr:nth-child(even) {
+      td {
+        background: lighten($light-grey,10%);
+      }
+    }
   }
   .sort-caret {
     @extend .icon;
