@@ -1,0 +1,20 @@
+@if ($use-backgrid == true) {
+  .backgrid {
+  }
+  .sort-caret {
+    @extend .icon;
+    &:before {
+      margin-left: 5px;
+    }
+  }
+  .ascending .sort-caret {
+    &:before {
+      content: "\f0d8";
+    }
+  }
+  .descending .sort-caret {
+    &:before {
+      content: "\f0d7";
+    }
+  }
+}
