@@ -45,6 +45,11 @@
         background: lighten($light-grey,10%);
       }
     }
+    tr:hover {
+      td {
+        background: $light-grey;
+      }
+    }
   }
   .sort-caret {
     @extend .icon;
