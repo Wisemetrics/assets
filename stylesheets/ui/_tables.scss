@@ -5,14 +5,14 @@
     font-size: $h6-size;
     border-collapse: collapse;
     th {
-      &:first-child {
+      &:nth-child(2n) {
         text-align: right;
       }
       background: $light-grey;
       text-transform: uppercase;
     }
     td {
-      &:first-child {
+      &:nth-child(2n) {
         text-align: left;
       }
     }
