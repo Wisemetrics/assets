@@ -299,3 +299,12 @@ you can use the generic selector below, but it's slower:
 .icon-bubbles:before {
   content: "\e03f";
 }
+.icon-ok:before {
+  content: "\f00c";
+}
+.icon-money:before {
+  content: "\f0d6";
+}
+.icon-eye:before {
+  content: "\e041";
+}
