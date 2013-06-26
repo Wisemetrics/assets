@@ -181,11 +181,25 @@ you can use the generic selector below, but it's slower:
   content: "\e027";
 }
 .icon-arrow-right:before {
-  @extend .icon;
+  font-family: 'wise-icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
   content: "\e028";
 }
 .icon-arrow-left:before {
-  @extend .icon;
+  font-family: 'wise-icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
   content: "\e029";
 }
 .icon-add:before {
