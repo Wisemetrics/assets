@@ -1,0 +1,112 @@
+@if ($use-header == true) {
+  #header {
+    line-height: 1;
+    height: $header-height;
+    font-size: 11px;
+    background: $background-header;
+    min-width: $content-min-width;
+    a {
+      color: #FFF;
+      text-decoration: none;
+    }
+    &.narrow {
+      .nav {
+        line-height: $header-height;
+      }
+    }
+    .nav {
+      margin: 0;
+      line-height: $header-height - 30px;
+      word-spacing: normal;
+      // letter-spacing: normal;
+      a {
+        text-align: center;
+        display: inline-block;
+        width: 120px;
+        padding: 0;
+        color: $nav-header;
+        position: relative;
+        padding-top: 40px;
+        &:hover, &.current {
+          background-color: $background-nav-enabled;
+          color: #FFF;
+          i {
+            display: block;
+          }
+        }
+        i {
+          display: none;
+          width: 32px;
+          line-height: 32px;
+          // background: $pink;
+          color: #FFF;
+          font-size: 14px;
+          position: absolute;
+          text-align: center;
+          left: 50%;
+          top: 50%;
+          margin-left: -16px;
+          margin-top: -30px;
+          @include border-radius(100px);
+        }
+        span {
+          position: relative;
+          line-height: 1em;
+          display: inline-block;
+          width: 100%;
+          b {
+            display: none;
+            font-family: ttr;
+            color: $pink;
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            text-align: center;
+            width: 100%;
+          }
+        }
+        &:hover span b {
+          display: block;
+        }
+      }
+      .disabled {
+        a {
+          cursor: not-allowed;
+          span {
+
+          }
+        }
+        i {
+          background: $text;
+        }
+      }
+    }
+  }
+  .logo {
+    display: block;
+    line-height: $header-height;
+    width: $left-col-width;
+    overflow: hidden;
+    span {
+    text-indent: -1000em;
+      display: inline-block;
+      background: image-url("big_logo_grey.png") no-repeat 0 0;
+      width: 145px;
+      height: 38px;
+      line-height: 38px;
+      @include background-size(cover);
+    }
+  }
+  #account {
+    width: 150px;
+    line-height: $header-height;
+    margin-right: $half-spacing-unit;
+    img {
+      width: 42px;
+      height: 42px;
+      margin-right: $half-spacing-unit;
+      @include inline-block;
+      @include border-radius(42px);
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.btn {
+  @include single-transition(all, .3s);
+}
+
+.btn--icon {
+  position: relative;
+  padding-left: 7em !important;
+  .icon {
+    border-right: 1px solid darken($pink, 30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    line-height: 2.5em;
+    padding-left: .7em;
+    padding-right: .7em;
+  }
+}
+
+.btn--alpha{
+  @include font-size($h4-size, false);
+}
+
+.btn--beta{
+  @include font-size($h5-size, false);
+}
+
+.btn--gamma{
+  @include font-size($h6-size, false);
+}
+
+.btn--large {
+  padding-left: 2em;
+  padding-right: 2em;
+  line-height: 5;
+}
+
+.btn--positive {
+  color: #FFF;
+  background-color: $pink;
+  border-bottom: .3em solid darken($pink, 20%);
+  &:hover {
+    background-color: darken($pink, 10%);
+    border-bottom: .3em solid darken($pink, 30%);
+  }
+}
+
+.btn--negative {
+  color: #FFF;
+  background-color: $violet;
+  border-bottom: .3em solid darken($violet, 20%);
+  &:hover {
+    background-color: darken($violet, 10%);
+    border-bottom: .3em solid darken($violet, 30%);
+  }
+}
+
+.form-fields {
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.additional {
+  display: inline-block;
+}
+
+.low {
+  text-transform: capitalize !important;
+}
+
+// Custom classes
+.inner {
+  margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+}
+
+.inner--box {
+  // padding: 2 * $base-spacing-unit 3 * $base-spacing-unit;
+  // background: #FFF;
+}
+
+// .logo {
+//   display: inline-block;
+//   text-indent: -1000em;
+//   background: image-url('logo-black.png') 0 50% no-repeat;
+//   width: 136px;
+//   height: 24px;
+//   @include background-size(cover);
+// }
+
+// .logo--white {
+//   background-image: image-url('logo-white.png') !important;
+// }
+
+.buttons-container {
+  padding: $base-spacing-unit;
+  background: $background-header;
+  color: #FFF;
+}
+
+.radio {
+  input {
+    display: none;
+    &:checked + label {
+      color: $pink;
+      &:before {
+        content: "\e014";
+      }
+    }
+  }
+  label {
+    color: $text;
+    &:before {
+      margin-right: 5px;
+      font-family: 'wise-icons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      // content: "\e014";
+      content: "\e03c";
+    }
+  }
+}
