@@ -1,19 +1,102 @@
 .btn {
+  color: #FFF !important;
+  background-color: $background-nav;
+  border-bottom: .3em solid darken($background-nav, 20%);
+  padding-left: 2em;
+  padding-right: 2em;
+  line-height: 3.1em;
+  height: 3em;
   @include single-transition(all, .3s);
+  &:hover {
+    background-color: darken($background-nav, 10%);
+    border-bottom: .3em solid darken($background-nav, 30%);
+  }
 }
 
 .btn--icon {
   position: relative;
   padding-left: 7em !important;
   .icon {
-    border-right: 1px solid darken($pink, 30%);
+    border-right: 1px solid darken($background-nav, 30%);
     position: absolute;
     top: 0;
     left: 0;
     font-size: 2em;
-    line-height: 2.5em;
+    line-height: 1.5em;
     padding-left: .7em;
     padding-right: .7em;
+    background: none;
+  }
+}
+
+.btn--transparent {
+  color: $background-nav;
+  background: none;
+  border-bottom-color: transparent;
+  text-decoration: underline;
+  &:hover {
+    background: none;
+    border-bottom-color: transparent;
+  }
+}
+
+.btn--pink {
+  background-color: $pink;
+  border-bottom-color: darken($pink, 20%);
+  &:hover {
+    background-color: darken($pink, 10%);
+    border-bottom-color: darken($pink, 30%);
+  }
+  .icon {
+    border-right-color: darken($pink, 30%);
+  }
+}
+
+.btn--orange {
+  background-color: $orange;
+  border-bottom-color: darken($orange, 20%);
+  &:hover {
+    background-color: darken($orange, 10%);
+    border-bottom-color: darken($orange, 30%);
+  }
+  .icon {
+    border-right-color: darken($orange, 30%);
+  }
+}
+
+.btn--green {
+  background-color: $green;
+  border-bottom-color: darken($green, 20%);
+  &:hover {
+    background-color: darken($green, 10%);
+    border-bottom-color: darken($green, 30%);
+  }
+  .icon {
+    border-right-color: darken($green, 30%);
+  }
+}
+
+.btn--blue {
+  background-color: $blue;
+  border-bottom-color: darken($blue, 20%);
+  &:hover {
+    background-color: darken($blue, 10%);
+    border-bottom-color: darken($blue, 30%);
+  }
+  .icon {
+    border-right-color: darken($blue, 30%);
+  }
+}
+
+.btn--light-grey {
+  background-color: $text;
+  border-bottom-color: darken($text, 20%);
+  &:hover {
+    background-color: darken($text, 10%);
+    border-bottom-color: darken($text, 30%);
+  }
+  .icon {
+    border-right-color: darken($text, 30%);
   }
 }
 
@@ -25,8 +108,17 @@
   @include font-size($h5-size, false);
 }
 
-.btn--gamma{
+.btn--gamma {
   @include font-size($h6-size, false);
+  padding-left: 4em !important;
+  .icon {
+    @include font-size($h6-size, false);
+    line-height: 3em;
+  }
+}
+
+.btn--delta {
+  @include font-size(10px, false);
 }
 
 .btn--large {
@@ -101,30 +193,27 @@
 }
 
 .radio {
+  display: inline;
   input {
     display: none;
-    &:checked + label {
-      color: $pink;
-      &:before {
-        content: "\e014";
+    &:checked + span {
+      color: $orange;
+      .icon:before {
+        content: "\e03c";
       }
     }
   }
-  label {
-    color: $text;
-    &:before {
-      margin-right: 5px;
-      font-family: 'wise-icons';
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      // content: "\e014";
-      content: "\e03c";
+}
+
+.checkbox {
+  display: inline;
+  input {
+    display: none;
+    &:checked + span {
+      color: $orange;
+      .icon:before {
+        content: "\e034";
+      }
     }
   }
 }

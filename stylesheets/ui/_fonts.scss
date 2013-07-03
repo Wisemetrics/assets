@@ -126,6 +126,9 @@ you can use the generic selector below, but it's slower:
 .icon-tag:before {
   content: "\e013";
 }
+.icon-spinner-2:before {
+  content: "\e014";
+}
 .icon-speech-bubble-right:before {
   content: "\e015";
 }
@@ -262,16 +265,16 @@ you can use the generic selector below, but it's slower:
   content: "\e03b";
 }
 .icon-radio-checked:before {
-  content: "\e014";
-}
-.icon-radio-unchecked:before {
   content: "\e03c";
 }
-.icon-bars:before {
+.icon-radio-unchecked:before {
   content: "\e03d";
 }
-.icon-link-2:before {
+.icon-bars:before {
   content: "\e03e";
+}
+.icon-link-2:before {
+  content: "\e03f";
 }
 .icon-cog-2:before {
   content: "\f013";
@@ -306,14 +309,14 @@ you can use the generic selector below, but it's slower:
 .icon-sort-up:before {
   content: "\f0de";
 }
-.icon-picture:before {
-  content: "\f03e";
+.icon-image-2:before {
+  content: "\e041";
 }
 .icon-user:before {
   content: "\f007";
 }
 .icon-bubbles:before {
-  content: "\e03f";
+  content: "\e042";
 }
 .icon-ok:before {
   content: "\f00c";
@@ -322,8 +325,11 @@ you can use the generic selector below, but it's slower:
   content: "\f0d6";
 }
 .icon-eye:before {
-  content: "\e041";
+  content: "\e043";
 }
 .icon-plus:before {
-  content: "\e042";
+  content: "\e044";
+}
+.icon-square:before {
+  content: "\e045";
 }
