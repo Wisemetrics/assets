@@ -21,6 +21,10 @@
   @include inline-block;
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 @if ($use-sidenav == true) {
   .sidenav {
     font-size: 11px;
