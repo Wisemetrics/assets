@@ -50,7 +50,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon {
+.icon, .icon-calendar, .icon-time, .icon-chevron-up, .icon-chevron-down {
   font-family: 'wise-icons';
   speak: none;
   font-style: normal;
@@ -177,7 +177,8 @@ you can use the generic selector below, but it's slower:
 .icon-clock:before {
   content: "\e025";
 }
-.icon-calendar-2:before {
+.icon-calendar-2:before,
+.icon-calendar:before {
   content: "\e026";
 }
 .icon-asterisk:before {
@@ -288,10 +289,12 @@ you can use the generic selector below, but it's slower:
 .icon-profile:before {
   content: "\e040";
 }
-.icon-caret-down:before {
+.icon-caret-down:before,
+.icon-chevron-down:before {
   content: "\f0d7";
 }
-.icon-caret-up:before {
+.icon-caret-up:before,
+.icon-chevron-up:before {
   content: "\f0d8";
 }
 .icon-caret-left:before {
@@ -335,4 +338,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-menu-2:before {
   content: "\e046";
+}
+.icon-clock-2:before, .icon-time:before {
+  content: "\e047";
 }
