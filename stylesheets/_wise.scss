@@ -140,6 +140,23 @@
   }
 }
 
+.grey {
+  color: $text;
+  a {
+    color: $text;
+    i {
+      background: $text;
+    }
+  }
+  .current {
+    background: lighten($text,50%);
+    .current a:before {
+      border-color: transparent transparent transparent lighten($text,50%);
+    }
+  }
+}
+
+
 // .btn--icon {
 //   position: relative;
 //   padding-left: 4em !important;
