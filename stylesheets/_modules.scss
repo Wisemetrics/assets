@@ -15,14 +15,14 @@
 
 .btn--icon {
   position: relative;
-  padding-left: 7em !important;
+  padding-left: 4em !important;
   .icon {
     border-right: 1px solid darken($background-nav, 30%);
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 2em;
-    line-height: 1.5em;
+    font-size: 1em;
+    line-height: 3em;
     padding-left: .7em;
     padding-right: .7em;
     background: none;
@@ -111,6 +111,20 @@
     border-right-color: darken($text, 30%);
   }
 }
+
+.btn--dark-blue {
+  background-color: $dark-blue;
+  border-bottom-color: darken($dark-blue, 20%);
+  &:hover {
+    background-color: darken($dark-blue, 10%);
+    border-bottom-color: darken($dark-blue, 30%);
+  }
+  .icon {
+    border-right-color: darken($dark-blue, 30%);
+  }
+}
+
+
 
 .btn--alpha{
   @include font-size($h4-size, false);
