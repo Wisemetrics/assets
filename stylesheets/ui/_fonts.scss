@@ -342,3 +342,6 @@ you can use the generic selector below, but it's slower:
 .icon-clock-2:before, .icon-time:before {
   content: "\e047";
 }
+.icon-remove-2:before {
+  content: "\f00d";
+}
