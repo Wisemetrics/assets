@@ -78,10 +78,12 @@
 
 .pink {
   color: $pink;
-  a {
-    color: $pink;
-    i {
-      background: $pink;
+  .nav & {
+    a {
+      color: $pink;
+      i {
+        background: $pink;
+      }
     }
   }
   .current {
@@ -94,10 +96,12 @@
 
 .green {
   color: $green;
-  a {
-    color: $green;
-    i {
-      background: $green;
+  .nav & {
+    a {
+      color: $green;
+      i {
+        background: $green;
+      }
     }
   }
   .current {
@@ -110,11 +114,13 @@
 
 .orange {
   color: $orange;
-  a {
-    color: $orange;
-    i {
-      background: $orange;
-    }
+  .nav & {
+    a {
+      color: $orange;
+      i {
+        background: $orange;
+      }
+    }    
   }
   .current {
     background: lighten($orange,45%);
@@ -126,10 +132,12 @@
 
 .blue {
   color: $blue;
-  a {
-    color: $blue;
-    i {
-      background: $blue;
+  .nav & {
+    a {
+      color: $blue;
+      i {
+        background: $blue;
+      }
     }
   }
   .current {
@@ -142,10 +150,12 @@
 
 .grey {
   color: $text;
-  a {
-    color: $text;
-    i {
-      background: $text;
+  .nav & {
+    a {
+      color: $text;
+      i {
+        background: $text;
+      }
     }
   }
   .current {
