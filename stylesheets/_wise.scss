@@ -148,6 +148,25 @@
   }
 }
 
+.violet {
+  color: $violet;
+  .nav & {
+    a {
+      color: $violet;
+      i {
+        background: $violet;
+      }
+    }
+  }
+  .current {
+    background: lighten($violet,50%);
+    .current a:before {
+      border-color: transparent transparent transparent lighten($violet,50%);
+    }
+  }
+}
+
+
 .grey {
   color: $text;
   .nav & {
