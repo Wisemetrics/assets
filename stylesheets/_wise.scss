@@ -10,6 +10,11 @@
   Wise components
 ***/
 
+strong, b {
+  font-family: ttb;
+  color: $titles;
+}
+
 // Display helpers
 .block {
   display: block !important;
