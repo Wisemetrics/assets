@@ -30,6 +30,26 @@ strong, b {
   text-decoration: line-through;
 }
 
+@mixin sidenav-color($bodyColor, $color) {
+  $light: 90%;
+  @if $bodyColor == 'violet' {
+    $light: 80%;
+  }
+  .#{$bodyColor} & {
+    > li > a {
+      color: $color;
+    }
+    &.current {
+      background: scale_color($color,$lightness: $light);
+      .current a {
+        &:before {
+          border-color: transparent transparent transparent scale_color($color,$lightness: 90%);
+        }
+      }
+    }    
+  }
+}
+
 @if ($use-sidenav == true) {
   .sidenav {
     font-size: 11px;
@@ -74,6 +94,11 @@ strong, b {
         }
       }
     }
+    @include sidenav-color("pink",$pink);
+    @include sidenav-color("green",$green);
+    @include sidenav-color("orange",$orange);
+    @include sidenav-color("blue",$blue);
+    @include sidenav-color("violet",$violet);
   }
 }
 
@@ -91,12 +116,6 @@ strong, b {
       }
     }
   }
-  .current {
-    background: lighten($pink,47%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($pink,47%);
-    }
-  }
 }
 
 .green {
@@ -107,12 +126,6 @@ strong, b {
       i {
         background: $green;
       }
-    }
-  }
-  .current {
-    background: lighten($green,50%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($green,50%);
     }
   }
 }
@@ -127,12 +140,6 @@ strong, b {
       }
     }    
   }
-  .current {
-    background: lighten($orange,45%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($orange,45%);
-    }
-  }
 }
 
 .blue {
@@ -143,12 +150,6 @@ strong, b {
       i {
         background: $blue;
       }
-    }
-  }
-  .current {
-    background: lighten($blue,50%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($blue,50%);
     }
   }
 }
@@ -163,12 +164,6 @@ strong, b {
       }
     }
   }
-  .current {
-    background: lighten($violet,50%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($violet,50%);
-    }
-  }
 }
 
 
@@ -180,12 +175,6 @@ strong, b {
       i {
         background: $text;
       }
-    }
-  }
-  .current {
-    background: lighten($text,50%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($text,50%);
     }
   }
 }
