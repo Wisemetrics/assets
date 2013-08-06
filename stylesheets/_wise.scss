@@ -5,6 +5,10 @@
 @import "ui/fonts";
 @import "ui/tables";
 @import "ui/header";
+@import "ui/country-select";
+@import "ui/progressbar";
+@import "ui/famfamfam-flags";
+
 
 /***
   Wise components
@@ -269,3 +273,24 @@ strong, b {
 .soft-quarter--ends     { padding-top:   $half-spacing-unit / 2 !important; padding-bottom:$half-spacing-unit / 2 !important; }
 .soft-quarter--sides    { padding-right: $half-spacing-unit / 2 !important; padding-left:  $half-spacing-unit / 2 !important; }
 
+// Separators
+.bd-top,
+.bd-right,
+.bd-bottom,
+.bd-left {
+  border-color: $light-grey;
+  border-style: solid;
+  border-width: 0;
+}
+.bd-top {
+  border-top-width: 1px;
+}
+.bd-right {
+  border-right-width: 1px;
+}
+.bd-bottom {
+  border-bottom-width: 1px;
+}
+.bd-left {
+  border-left-width: 1px;
+}
