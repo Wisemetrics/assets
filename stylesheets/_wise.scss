@@ -5,10 +5,19 @@
 @import "ui/fonts";
 @import "ui/tables";
 @import "ui/header";
+@import "ui/country-select";
+@import "ui/progressbar";
+@import "ui/famfamfam-flags";
+
 
 /***
   Wise components
 ***/
+
+strong, b {
+  font-family: ttb;
+  color: $titles;
+}
 
 // Display helpers
 .block {
@@ -23,6 +32,26 @@
 
 .strike {
   text-decoration: line-through;
+}
+
+@mixin sidenav-color($bodyColor, $color) {
+  $light: 90%;
+  @if $bodyColor == 'violet' {
+    $light: 80%;
+  }
+  .#{$bodyColor} & {
+    > li > a {
+      color: $color;
+    }
+    &.current {
+      background: scale_color($color,$lightness: $light);
+      .current a {
+        &:before {
+          border-color: transparent transparent transparent scale_color($color,$lightness: 90%);
+        }
+      }
+    }    
+  }
 }
 
 @if ($use-sidenav == true) {
@@ -69,6 +98,11 @@
         }
       }
     }
+    @include sidenav-color("pink",$pink);
+    @include sidenav-color("green",$green);
+    @include sidenav-color("orange",$orange);
+    @include sidenav-color("blue",$blue);
+    @include sidenav-color("violet",$violet);
   }
 }
 
@@ -78,80 +112,73 @@
 
 .pink {
   color: $pink;
-  a {
-    color: $pink;
-    i {
-      background: $pink;
-    }
-  }
-  .current {
-    background: lighten($pink,47%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($pink,47%);
+  .nav & {
+    a {
+      color: $pink;
+      i {
+        background: $pink;
+      }
     }
   }
 }
 
 .green {
   color: $green;
-  a {
-    color: $green;
-    i {
-      background: $green;
-    }
-  }
-  .current {
-    background: lighten($green,50%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($green,50%);
+  .nav & {
+    a {
+      color: $green;
+      i {
+        background: $green;
+      }
     }
   }
 }
 
 .orange {
   color: $orange;
-  a {
-    color: $orange;
-    i {
-      background: $orange;
-    }
-  }
-  .current {
-    background: lighten($orange,45%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($orange,45%);
-    }
+  .nav & {
+    a {
+      color: $orange;
+      i {
+        background: $orange;
+      }
+    }    
   }
 }
 
 .blue {
   color: $blue;
-  a {
-    color: $blue;
-    i {
-      background: $blue;
-    }
-  }
-  .current {
-    background: lighten($blue,50%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($blue,50%);
+  .nav & {
+    a {
+      color: $blue;
+      i {
+        background: $blue;
+      }
     }
   }
 }
 
-.grey {
-  color: $text;
-  a {
-    color: $text;
-    i {
-      background: $text;
+.violet {
+  color: $violet;
+  .nav & {
+    a {
+      color: $violet;
+      i {
+        background: $violet;
+      }
     }
   }
-  .current {
-    background: lighten($text,50%);
-    .current a:before {
-      border-color: transparent transparent transparent lighten($text,50%);
+}
+
+
+.grey {
+  color: $text;
+  .nav & {
+    a {
+      color: $text;
+      i {
+        background: $text;
+      }
     }
   }
 }
@@ -246,3 +273,24 @@
 .soft-quarter--ends     { padding-top:   $half-spacing-unit / 2 !important; padding-bottom:$half-spacing-unit / 2 !important; }
 .soft-quarter--sides    { padding-right: $half-spacing-unit / 2 !important; padding-left:  $half-spacing-unit / 2 !important; }
 
+// Separators
+.bd-top,
+.bd-right,
+.bd-bottom,
+.bd-left {
+  border-color: $light-grey;
+  border-style: solid;
+  border-width: 0;
+}
+.bd-top {
+  border-top-width: 1px;
+}
+.bd-right {
+  border-right-width: 1px;
+}
+.bd-bottom {
+  border-bottom-width: 1px;
+}
+.bd-left {
+  border-left-width: 1px;
+}

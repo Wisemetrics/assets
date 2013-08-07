@@ -1,0 +1,27 @@
+@if ($use-country-select == true) {
+  .country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: $h6-size;
+    .country {
+      // padding-left: $base-spacing-unit;
+      margin-bottom: $half-spacing-unit;
+    }
+    .text {
+      strong {
+        font-size: $h3-size;
+        color: $violet;
+        font-family: ttb;
+        display: block;
+        line-height: 16px;
+      }
+      span {
+        line-height: 8px;
+      }
+    }
+  }
+  .country__name {
+    text-transform: uppercase;
+  }
+}
