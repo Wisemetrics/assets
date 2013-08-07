@@ -1,3 +1,4 @@
+@import 'recipes/shape';
 @if ($use-header == true) {
   #header {
     line-height: 1;
@@ -98,7 +99,7 @@
     }
   }
   #account {
-    width: 150px;
+    width: 200px;
     line-height: $header-height;
     margin-right: $half-spacing-unit;
     img {
@@ -107,6 +108,101 @@
       margin-right: $half-spacing-unit;
       @include inline-block;
       @include border-radius(42px);
+    }
+  }
+  #notifications {
+    position: relative;
+    line-height: $header-height - 28px;
+    margin-right: $base-spacing-unit*2;
+    padding-top:  28px;
+    .toggle {
+      color: $text;
+      position: relative;
+      font-size: 28px;
+      i {
+        display: block;
+        font-family: ttb;
+        font-size: 14px;
+        position: absolute;
+        font-style: normal;
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background: $orange;
+        color: $white;
+        @include border-radius(24px);
+      }
+    }
+    ul {
+      display: none;
+      position: absolute;
+      list-style: none;
+      line-height: 1em;
+      padding: 0;
+      margin: 0;
+      width: 300px;
+      background: $white;
+      left: -30px;
+      border: 1px solid $light-grey;
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: -1.5em;
+        left: 28px;
+        @include triangle(top,3em,half,$white);
+      }
+    }
+    li {
+      border-bottom: 1px solid $light-grey;
+      position: relative;
+      &:last-child {
+        border: none;
+      }
+      a {
+        display: block;
+        padding: $half-spacing-unit $half-spacing-unit*1.5 $half-spacing-unit $half-spacing-unit*1.5 + 40px;
+        color: $text;
+        b {
+          display: block;
+          font-family: ttb;
+        }
+        .icon {
+          position: absolute;
+          font-size: 20px;
+          left: $half-spacing-unit*1.5;
+        }        
+      }
+      .hide {
+        position: absolute;
+        z-index: 2;
+        display: none;
+        right: 5px;
+        top: 5px;
+        border: 2px solid $text;
+        font-size: 10px;
+        width: 14px;
+        height: 14px;
+        text-align: center;
+        padding: 0;
+        line-height: 9px;
+        @include border-radius(20px);
+        &:hover {
+          color: $orange;
+          border-color: $orange;
+        }
+      }
+      &:hover {
+        .hide {
+          display: block;
+        }
+      }
+    }
+    &.enabled ul {
+      display: block;
     }
   }
 }
