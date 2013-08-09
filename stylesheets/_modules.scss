@@ -255,6 +255,7 @@
 
 .toggle {
   @include inline-block;
+  @include user-select(none);
   input {
     display: none;
     & + span {    
