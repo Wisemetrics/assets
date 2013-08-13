@@ -331,3 +331,57 @@
     }
   }
 }
+
+.steps {
+  li {
+    $bullet-width: 6px;
+    $bullet-spacing: 10px;
+    position: relative;
+    &:before {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      background: $background-page;
+      width: 50%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      content: "";
+    }
+    &:after {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      background: $background-page;
+      width: 50%;
+      height: 1px;
+      top: 0;
+      right: 0;
+      content: "";
+    }
+    strong {
+      color: $light-grey;
+      &:before {
+        position: relative;
+        z-index: 10;
+        display: block;
+        margin: -($bullet-spacing + $bullet-width/2) auto 0;
+        content: "";
+        width: (($bullet-spacing * 2) + $bullet-width);
+        height: (($bullet-spacing * 2) + $bullet-width);
+        background: $light-grey;
+        border: $bullet-spacing solid $white;
+        @include border-radius(28px);
+      }      
+    }
+    &.done {
+      strong {
+        color: $theme-color-primary;
+        font-family: ttb;
+        &:before {
+          background: $theme-color-primary;          
+        }
+      }
+    }
+  }
+}
