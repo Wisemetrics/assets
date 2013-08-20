@@ -1,12 +1,28 @@
 @if ($use-country-select == true) {
-  .country-list {
+  .location-list {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: $h6-size;
-    .country {
-      // padding-left: $base-spacing-unit;
+    .location {
       margin-bottom: $half-spacing-unit;
+      position: relative;
+      .remove {
+        color: $light-grey;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        text-decoration: none;
+        display: none;
+        &:hover {
+          color: $text;
+        }
+      }
+      &:hover {
+        .remove {
+          display: block;
+        }
+      }
     }
     .text {
       strong {
@@ -21,7 +37,8 @@
       }
     }
   }
-  .country__name {
+  .location__name {
     text-transform: uppercase;
   }
+
 }
