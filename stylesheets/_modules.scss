@@ -229,10 +229,11 @@
 
 .radio {
   display: inline;
+  @include user-select(none);
   input {
     display: none;
     &:checked + span {
-      color: $orange;
+      color: $theme-color-secondary;
       .icon:before {
         content: "\e03c";
       }
@@ -242,10 +243,11 @@
 
 .checkbox {
   display: inline;
+  @include user-select(none);
   input {
     display: none;
     &:checked + span {
-      color: $orange;
+      color: $theme-color-secondary;
       .icon:before {
         content: "\e034";
       }
