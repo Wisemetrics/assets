@@ -1,14 +1,8 @@
 // Titillium
-@include font-face("ttl", font-files("TitilliumText22L002-webfont.woff", "TitilliumText22L002-webfont.ttf", "TitilliumText22L002-webfont.svg", "TitilliumText22L002-webfont.eot"));
-@include font-face("ttr", font-files("TitilliumText22L003-webfont.woff", "TitilliumText22L003-webfont.ttf", "TitilliumText22L003-webfont.svg", "TitilliumText22L003-webfont.eot"));
-@include font-face("ttb", font-files("TitilliumText22L005-webfont.woff", "TitilliumText22L005-webfont.ttf", "TitilliumText22L005-webfont.svg", "TitilliumText22L005-webfont.eot"));
-
-// Icons
-@include font-face("wise-icons", font-files("wise-icons.woff", "wise-icons.ttf", "wise-icons.svg", "wise-icons.eot"));
-
-// Font declaration
-
 @if ($use-titillium-font == true) {
+  @include font-face("ttl", font-files("TitilliumText22L002-webfont.woff", "TitilliumText22L002-webfont.ttf", "TitilliumText22L002-webfont.svg", "TitilliumText22L002-webfont.eot"));
+  @include font-face("ttr", font-files("TitilliumText22L003-webfont.woff", "TitilliumText22L003-webfont.ttf", "TitilliumText22L003-webfont.svg", "TitilliumText22L003-webfont.eot"));
+  @include font-face("ttb", font-files("TitilliumText22L005-webfont.woff", "TitilliumText22L005-webfont.ttf", "TitilliumText22L005-webfont.svg", "TitilliumText22L005-webfont.eot"));
   body {
     font-family: ttr, Helvetica, Arial, sans-serif;
   }
@@ -20,6 +14,19 @@
     font-weight: normal;
   }
 }
+
+// Klavika
+@if ($use-klavika-font == true) {
+  @include font-face("klavika", font-files("klavikalight-italicosf-webfont.woff", "klavikalight-italicosf-webfont.ttf", "klavikalight-italicosf-webfont.svg", "klavikalight-italicosf-webfont.eot"));
+  .klavika {
+    font-family: klavika;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+// Icons
+@include font-face("wise-icons", font-files("wise-icons.woff", "wise-icons.ttf", "wise-icons.svg", "wise-icons.eot"));
 
 /*@font-face {
   font-family: 'wise-font';
