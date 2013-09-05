@@ -143,6 +143,8 @@
   .icon {
     @include font-size($h6-size, false);
     line-height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 
@@ -197,30 +199,6 @@
 }
 
 // Custom classes
-.inner {
-  margin: 0 auto;
-  max-width: 800px;
-  position: relative;
-}
-
-.inner--box {
-  // padding: 2 * $base-spacing-unit 3 * $base-spacing-unit;
-  // background: #FFF;
-}
-
-// .logo {
-//   display: inline-block;
-//   text-indent: -1000em;
-//   background: image-url('logo-black.png') 0 50% no-repeat;
-//   width: 136px;
-//   height: 24px;
-//   @include background-size(cover);
-// }
-
-// .logo--white {
-//   background-image: image-url('logo-white.png') !important;
-// }
-
 .buttons-container {
   padding: $base-spacing-unit;
   background: $background-header;

@@ -7,6 +7,9 @@
 @import "compass/css3/opacity";
 @import "compass/css3/user-interface";
 @import "compass/css3/font-face";
+@import "compass/css3/background-size";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
 @import "vars";
 @import "inuit.css/inuit";
 @import "ui/fonts";
@@ -41,9 +44,15 @@ strong, b {
 .clear {
   clear: both;
 }
-
 .strike {
   text-decoration: line-through;
+}
+.thin {
+  font-family: ttr;
+  font-weight: normal;
+}
+.ovh {
+  overflow: hidden;
 }
 
 @mixin sidenav-color($bodyColor, $color) {
