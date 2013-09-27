@@ -14,71 +14,71 @@
         line-height: $header-height;
       }
     }
-    .nav {
-      margin: 0;
-      line-height: $header-height - 30px;
-      word-spacing: normal;
-      // letter-spacing: normal;
-      a {
-        text-align: center;
-        display: inline-block;
-        width: 120px;
-        padding: 0;
-        color: $nav-header;
-        position: relative;
-        padding-top: 40px;
-        &:hover, &.current {
-          background-color: $background-nav-enabled;
-          color: #FFF;
-          i {
-            display: block;
-          }
-        }
+  }
+  .nav {
+    margin: 0;
+    line-height: $header-height - 30px;
+    word-spacing: normal;
+    // letter-spacing: normal;
+    > li > a {
+      text-align: center;
+      display: inline-block;
+      width: 120px;
+      padding: 0;
+      color: $nav-header;
+      position: relative;
+      padding-top: 40px;
+      &:hover, &.current {
+        background-color: $background-nav-enabled;
+        color: #FFF;
         i {
-          display: none;
-          width: 32px;
-          line-height: 32px;
-          // background: $pink;
-          color: #FFF;
-          font-size: 14px;
-          position: absolute;
-          text-align: center;
-          left: 50%;
-          top: 50%;
-          margin-left: -16px;
-          margin-top: -30px;
-          @include border-radius(100px);
-        }
-        span {
-          position: relative;
-          line-height: 1em;
-          display: inline-block;
-          width: 100%;
-          b {
-            display: none;
-            font-family: ttr;
-            color: $pink;
-            position: absolute;
-            bottom: -14px;
-            left: 0;
-            text-align: center;
-            width: 100%;
-          }
-        }
-        &:hover span b {
           display: block;
         }
       }
-      .disabled {
-        a {
-          cursor: not-allowed;
-          span {
+      i {
+        display: none;
+        width: 32px;
+        line-height: 32px;
+        // background: $pink;
+        color: #FFF;
+        font-size: 14px;
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        margin-left: -16px;
+        margin-top: -30px;
+        @include border-radius(100px);
+      }
+      span {
+        position: relative;
+        line-height: 1em;
+        display: inline-block;
+        width: 100%;
+        b {
+          display: none;
+          font-family: ttr;
+          color: $pink;
+          position: absolute;
+          bottom: -14px;
+          left: 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+      &:hover span b {
+        display: block;
+      }
+    }
+    .disabled {
+      a {
+        cursor: not-allowed;
+        span {
 
-          }
         }
-        i {
-          background: $text;
-        }
+      }
+      i {
+        background: $text;
       }
     }
   }
