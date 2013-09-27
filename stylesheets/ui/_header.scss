@@ -23,33 +23,9 @@
     > li > a {
       text-align: center;
       display: inline-block;
-      width: 120px;
       padding: 0;
       color: $nav-header;
       position: relative;
-      padding-top: 40px;
-      &:hover, &.current {
-        background-color: $background-nav-enabled;
-        color: #FFF;
-        i {
-          display: block;
-        }
-      }
-      i {
-        display: none;
-        width: 32px;
-        line-height: 32px;
-        // background: $pink;
-        color: #FFF;
-        font-size: 14px;
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        top: 50%;
-        margin-left: -16px;
-        margin-top: -30px;
-        @include border-radius(100px);
-      }
       span {
         position: relative;
         line-height: 1em;
@@ -66,9 +42,6 @@
           width: 100%;
         }
       }
-      &:hover span b {
-        display: block;
-      }
     }
     .disabled {
       a {
@@ -81,6 +54,9 @@
         background: $text;
       }
     }
+  }
+  .nav--stacked {
+    line-height: inherit;
   }
   .logo {
     display: block;
