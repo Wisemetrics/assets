@@ -90,6 +90,17 @@
     line-height: $header-height - 28px;
     margin-right: $base-spacing-unit*2;
     padding-top:  28px;
+    &.open {
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        bottom: -1px;
+        z-index: 2;
+        left: 0;
+        @include triangle(top,3em,half,$white);
+      }
+    }
     > .icon {
       color: $text;
       position: relative;
@@ -120,14 +131,8 @@
       background: $white;
       left: -30px;
       border: 1px solid $light-grey;
-      &:before {
-        position: absolute;
-        display: block;
-        content: '';
-        top: -1.5em;
-        left: 28px;
-        @include triangle(top,3em,half,$white);
-      }
+      overflow: auto;
+      max-height: 236px;
     }
     li {
       border-bottom: 1px solid $light-grey;
