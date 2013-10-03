@@ -20,6 +20,9 @@
     line-height: $header-height - 30px;
     word-spacing: normal;
     // letter-spacing: normal;
+    > li {
+      vertical-align: middle;
+    }
     > li > a {
       text-align: center;
       display: inline-block;
@@ -52,6 +55,16 @@
       }
       i {
         background: $text;
+      }
+    }
+  }
+  .nav__icon {
+    line-height: 1;
+    > a {
+      line-height: 34px;
+      padding: 21px 28px 14px !important;
+      > .icon {
+        display: block;
       }
     }
   }
