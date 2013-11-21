@@ -10,10 +10,11 @@
       .remove {
         color: $light-grey;
         position: absolute;
-        top: 5px;
+        top: 0;
         left: 0;
         text-decoration: none;
         display: none;
+        background: none;
         &:hover {
           color: $text;
         }

@@ -14,73 +14,62 @@
         line-height: $header-height;
       }
     }
-    .nav {
-      margin: 0;
-      line-height: $header-height - 30px;
-      word-spacing: normal;
-      // letter-spacing: normal;
-      a {
-        text-align: center;
-        display: inline-block;
-        width: 120px;
-        padding: 0;
-        color: $nav-header;
+  }
+  .nav {
+    margin: 0;
+    line-height: $header-height - 30px;
+    word-spacing: normal;
+    // letter-spacing: normal;
+    > li {
+      vertical-align: middle;
+    }
+    > li > a {
+      text-align: center;
+      display: inline-block;
+      padding: 0;
+      color: $nav-header;
+      position: relative;
+      span {
         position: relative;
-        padding-top: 40px;
-        &:hover, &.current {
-          background-color: $background-nav-enabled;
-          color: #FFF;
-          i {
-            display: block;
-          }
-        }
-        i {
+        line-height: 1em;
+        display: inline-block;
+        width: 100%;
+        b {
           display: none;
-          width: 32px;
-          line-height: 32px;
-          // background: $pink;
-          color: #FFF;
-          font-size: 14px;
+          font-family: ttr;
+          color: $pink;
           position: absolute;
+          bottom: -14px;
+          left: 0;
           text-align: center;
-          left: 50%;
-          top: 50%;
-          margin-left: -16px;
-          margin-top: -30px;
-          @include border-radius(100px);
-        }
-        span {
-          position: relative;
-          line-height: 1em;
-          display: inline-block;
           width: 100%;
-          b {
-            display: none;
-            font-family: ttr;
-            color: $pink;
-            position: absolute;
-            bottom: -14px;
-            left: 0;
-            text-align: center;
-            width: 100%;
-          }
-        }
-        &:hover span b {
-          display: block;
-        }
-      }
-      .disabled {
-        a {
-          cursor: not-allowed;
-          span {
-
-          }
-        }
-        i {
-          background: $text;
         }
       }
     }
+    .disabled {
+      a {
+        cursor: not-allowed;
+        span {
+
+        }
+      }
+      i {
+        background: $text;
+      }
+    }
+  }
+  .nav__icon {
+    line-height: 1;
+    > a {
+      line-height: 34px;
+      padding: 21px 28px 14px !important;
+      > .icon {
+        display: block;
+      }
+    }
+  }
+  .nav--stacked {
+    line-height: inherit;
   }
   .logo {
     display: block;
@@ -114,7 +103,18 @@
     line-height: $header-height - 28px;
     margin-right: $base-spacing-unit*2;
     padding-top:  28px;
-    .toggle {
+    &.open {
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        bottom: -1px;
+        z-index: 2;
+        left: 0;
+        @include triangle(top,3em,half,$white);
+      }
+    }
+    > .icon {
       color: $text;
       position: relative;
       font-size: 28px;
@@ -136,8 +136,6 @@
       }
     }
     ul {
-      display: none;
-      position: absolute;
       list-style: none;
       line-height: 1em;
       padding: 0;
@@ -146,14 +144,8 @@
       background: $white;
       left: -30px;
       border: 1px solid $light-grey;
-      &:before {
-        position: absolute;
-        display: block;
-        content: '';
-        top: -1.5em;
-        left: 28px;
-        @include triangle(top,3em,half,$white);
-      }
+      overflow: auto;
+      max-height: 236px;
     }
     li {
       border-bottom: 1px solid $light-grey;
@@ -161,7 +153,10 @@
       &:last-child {
         border: none;
       }
-      a {
+      .read {
+        background: $light-grey;
+      }
+      a:first-child {
         display: block;
         padding: $half-spacing-unit $half-spacing-unit*1.5 $half-spacing-unit $half-spacing-unit*1.5 + 40px;
         color: $text;
@@ -177,31 +172,17 @@
       }
       .hide {
         position: absolute;
-        z-index: 2;
-        display: none;
         right: 5px;
         top: 5px;
-        border: 2px solid $text;
-        font-size: 10px;
-        width: 14px;
-        height: 14px;
-        text-align: center;
+        z-index: 2;
         padding: 0;
-        line-height: 9px;
-        @include border-radius(20px);
-        &:hover {
-          color: $orange;
-          border-color: $orange;
+        input + span {
+          color: $light-grey;
+        }
+        input:checked + span {
+          color: darken($light-grey, 10%);          
         }
       }
-      &:hover {
-        .hide {
-          display: block;
-        }
-      }
-    }
-    &.enabled ul {
-      display: block;
     }
   }
 }

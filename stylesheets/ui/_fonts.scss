@@ -397,12 +397,32 @@ you can use the generic selector below, but it's slower:
 .icon-chevron-left:before {
   content: "\f053";
 }
-
+.icon-star-3:before {
+  content: "\e056";
+}
+.icon-star-4:before {
+  content: "\e057";
+}
+.icon-star-5:before {
+  content: "\e058";
+}
+.icon-brightness-high:before {
+  content: "\e059";
+}
+.icon-contract-2:before {
+  content: "\e05a";
+}
+.icon-dashboard:before {
+  content: "\e05b";
+}
 .icon-paragraph-justify-2:before {
   content: "\e600";
 }
 .icon-video-2:before {
   content: "\e601";
+}
+.icon-pin:before {
+  content: "\e602";
 }
 .icon-browser-new-window-22:before {
   content: "\e603";
@@ -410,39 +430,18 @@ you can use the generic selector below, but it's slower:
 .icon-inbox2:before {
   content: "\e604";
 }
-.icon-browser-upload-2:before {
-  content: "\e602";
-}
-.icon-layout-content-right:before {
+.icon-contract-3:before {
   content: "\e605";
 }
-.icon-cloud-add-2:before {
+.icon-flux:before {
   content: "\e606";
 }
-.icon-droplet:before {
+.icon-users:before {
+  content: "\e012";
+}
+.icon-browser-upload-2:before {
   content: "\e607";
 }
-.icon-heart-full:before {
+.icon-layout-content-right:before {
   content: "\e608";
-}
-.icon-eye-2:before {
-  content: "\e609";
-}
-.icon-image:before {
-  content: "\e60a";
-}
-.icon-user-3:before {
-  content: "\e60b";
-}
-.icon-calendar:before {
-  content: "\e60c";
-}
-.icon-tick:before {
-  content: "\e60d";
-}
-.icon-pin-2:before {
-  content: "\e60e";
-}
-.icon-clock:before {
-  content: "\e60f";
 }
