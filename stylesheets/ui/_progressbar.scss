@@ -1,7 +1,7 @@
 @if ($use-progressbar == true) {
   .progress-bar {
     @include inline-block;
-    width: 50%;
+    width: 100%;
     background: $light-grey;
     line-height: 1.5em;
     height: 1.5em;
