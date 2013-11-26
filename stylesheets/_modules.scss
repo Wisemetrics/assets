@@ -257,6 +257,7 @@
 
 
 .slider {
+  background: $theme-color-secondary;
   width: 100%;
   .dragger {
     background: $titles;
@@ -285,12 +286,14 @@
     height: 16px;
     background: $light-grey;
     border: none;
+    margin-left: 8px;
     @include border-radius(0);
     @include box-shadow(none);
   }
   .highlight-track {
     background: $theme-color-secondary;
     height: 16px;
+    margin-left: -8px;
     @include border-radius(0);
     @include box-shadow(none);    
   }
