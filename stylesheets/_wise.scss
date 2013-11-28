@@ -194,7 +194,6 @@ strong, b {
   }
 }
 
-
 .grey {
   color: $text;
   .nav & {
@@ -207,23 +206,39 @@ strong, b {
   }
 }
 
+.white {
+  color: $white;
+  .nav & {
+    a {
+      color: $white;
+      i {
+        background: $white;
+      }
+    }
+  }
+}
 
-// .btn--icon {
-//   position: relative;
-//   padding-left: 4em !important;
-//   .icon {
-//     border-right: 1px solid darken($background-nav, 30%);
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     font-size: 1em;
-//     line-height: 1.5em;
-//     padding-left: 1em;
-//     padding-right: 1em;
-//   }
-// }
-
-
+.bg-pink {
+  background: $pink;
+}
+.bg-green {
+  background: $green;
+}
+.bg-orange {
+  background: $orange;
+}
+.bg-blue {
+  background: $blue;
+}
+.bg-violet {
+  background: $violet;
+}
+.bg-grey {
+  background: $text;
+}
+.bg-white {
+  background: $white;
+}
 
 
 // Custom classes
