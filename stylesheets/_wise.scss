@@ -206,6 +206,18 @@ strong, b {
   }
 }
 
+.black {
+  color: #000;
+  .nav & {
+    a {
+      color: #000;
+      i {
+        background: #000;
+      }
+    }
+  }
+}
+
 .white {
   color: $white;
   .nav & {
