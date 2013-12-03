@@ -114,14 +114,14 @@
 }
 
 .btn--dark-blue {
-  background-color: $dark-blue;
-  border-bottom-color: darken($dark-blue, 20%);
+  background-color: lighten($dark-blue, 8%);
+  border-bottom-color: darken($dark-blue, 10%);
   &:hover {
-    background-color: darken($dark-blue, 10%);
-    border-bottom-color: darken($dark-blue, 30%);
+    background-color: $dark-blue;
+    border-bottom-color: darken($dark-blue, 20%);
   }
   .icon {
-    border-right-color: darken($dark-blue, 30%);
+    border-right-color: lighten($dark-blue,20%);
   }
 }
 
