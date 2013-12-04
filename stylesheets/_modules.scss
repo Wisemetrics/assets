@@ -4,8 +4,8 @@
   border-bottom: .3em solid darken($background-nav, 20%);
   padding-left: 2em;
   padding-right: 2em;
-  line-height: 3.1em;
-  height: 3em;
+  line-height: 3.6em;
+  height: 3.5em;
   @include single-transition(all, .3s);
   &:hover {
     background-color: darken($background-nav, 10%);

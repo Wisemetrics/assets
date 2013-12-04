@@ -12,6 +12,9 @@
         position: absolute;
         top: 0;
         left: 0;
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
         text-decoration: none;
         display: none;
         background: none;
@@ -40,6 +43,9 @@
   }
   .location__name {
     text-transform: uppercase;
+  }
+  .city-list .location-list .location .remove {
+    top: 4px;
   }
 
 }
