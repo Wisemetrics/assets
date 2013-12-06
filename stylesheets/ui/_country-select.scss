@@ -25,6 +25,7 @@
       &:hover {
         .remove {
           display: block;
+          color: $titles !important;
         }
       }
     }
