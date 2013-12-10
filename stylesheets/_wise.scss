@@ -17,12 +17,13 @@
 @import "ui/tables";
 @import "recipes/shape";
 
+@import "qtip2/jquery.qtip";
 @import "ui/header";
 @import "ui/country-select";
 @import "ui/progressbar";
 @import "ui/dropdown";
 @import "ui/famfamfam-flags";
-@import "qtip2/jquery.qtip";
+@import "ui/qtip";
 
 
 /***
@@ -325,6 +326,7 @@ strong, b {
 .soft-quarter--sides    { padding-right: $half-spacing-unit / 2 !important; padding-left:  $half-spacing-unit / 2 !important; }
 
 // Separators
+.bd,
 .bd-top,
 .bd-right,
 .bd-bottom,
@@ -332,6 +334,9 @@ strong, b {
   border-color: $light-grey;
   border-style: solid;
   border-width: 0;
+}
+.bd {
+  border-width: 1px;
 }
 .bd-top {
   border-top-width: 1px;
