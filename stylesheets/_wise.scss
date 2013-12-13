@@ -58,6 +58,9 @@ strong, b {
 .ovh {
   overflow: hidden;
 }
+.single-line {
+  line-height: 1 !important;
+}
 
 @mixin sidenav-color($bodyColor, $color) {
   $light: 90%;
