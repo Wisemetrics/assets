@@ -355,3 +355,18 @@ strong, b {
 .outlined {
   outline: 4px solid $light-grey;
 }
+
+// Mini logos
+.logo--icon {
+  &.icon {
+    background: $dark-blue;
+    color: #FFF;
+    padding: 0 4px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+  }
+  &.icon-twitter {
+    background: $blue;    
+  }
+}
