@@ -185,6 +185,18 @@ strong, b {
   }
 }
 
+.dark-blue {
+  color: $dark-blue;
+  .nav & {
+    a {
+      color: $dark-blue;
+      i {
+        background: $dark-blue;
+      }
+    }
+  }
+}
+
 .violet {
   color: $violet;
   .nav & {
