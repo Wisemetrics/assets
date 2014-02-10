@@ -78,13 +78,13 @@
 
 .btn--blue {
   background-color: $blue;
-  border-bottom-color: darken($blue, 20%);
+  border-bottom-color: darken($blue, 10%);
   &:hover {
     background-color: darken($blue, 10%);
-    border-bottom-color: darken($blue, 30%);
+    border-bottom-color: darken($blue, 20%);
   }
   .icon {
-    border-right-color: darken($blue, 30%);
+    border-right-color: darken($blue, 20%);
   }
 }
 
