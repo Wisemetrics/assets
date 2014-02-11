@@ -87,7 +87,7 @@
     }
   }
   #account {
-    width: 200px;
+    width: 260px;
     line-height: $header-height;
     margin-right: $half-spacing-unit;
     img {
@@ -168,7 +168,7 @@
           position: absolute;
           font-size: 20px;
           left: $half-spacing-unit*1.5;
-        }        
+        }
       }
       .hide {
         position: absolute;
@@ -180,7 +180,7 @@
           color: $light-grey;
         }
         input:checked + span {
-          color: darken($light-grey, 10%);          
+          color: darken($light-grey, 10%);
         }
       }
     }
@@ -215,7 +215,7 @@
       overflow: auto;
       max-height: 236px;
       z-index: 10;
-    }   
+    }
     li {
       a {
         display: block;
@@ -228,6 +228,6 @@
           background: $light-grey !important;
         }
       }
-    } 
+    }
   }
 }
