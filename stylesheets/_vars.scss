@@ -27,7 +27,7 @@ $use-grids:         true;
 $use-flexbox:       true;
 $use-columns:       true;
 $use-nav:           true;
-$use-options:       false;
+$use-options:       false !default;
 $use-pagination:    false;
 $use-breadcrumb:    false;
 $use-media:         false;
