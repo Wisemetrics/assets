@@ -54,11 +54,26 @@ strong, b {
   font-family: ttr;
   font-weight: normal;
 }
+.thick {
+  font-family: ttb;
+  font-weight: normal;  
+}
 .ovh {
   overflow: hidden;
 }
 .single-line {
   line-height: 1 !important;
+}
+
+.rule {
+  line-height: 1;
+  span {
+    background: #FFF;
+    padding: 0 $half-spacing-unit;
+    top: .6em;
+    position: relative;
+    @include inline-block;
+  }
 }
 
 @mixin sidenav-color($bodyColor, $color) {
