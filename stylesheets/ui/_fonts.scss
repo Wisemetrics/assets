@@ -451,9 +451,18 @@ you can use the generic selector below, but it's slower:
 .icon-pencil:before {
   content: "\e60a";
 }
+.icon-stopwatch:before {
+  content: "\e60d";
+}
 .icon-bullhorn:before {
   content: "\e60b";
 }
-.icon-stopwatch:before {
-  content: "\e60d";
+.icon-cogs:before {
+  content: "\e60e";
+}
+.icon-repeat:before {
+  content: "\e60f";
+}
+.icon-refresh:before {
+  content: "\e610";
 }
