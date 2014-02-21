@@ -379,9 +379,31 @@ strong, b {
 .bd-left {
   border-left-width: 1px;
 }
+.bd-pink {
+  border-color: $pink;
+}
+.bd-green {
+  border-color: $green;
+}
+.bd-orange {
+  border-color: $orange;
+}
+.bd-blue {
+  border-color: $blue;
+}
+.bd-violet {
+  border-color: $violet;
+}
+.bd-grey {
+  border-color: $text;
+}
+.bd-white {
+  border-color: $white;
+}
 .outlined {
   outline: 4px solid $light-grey;
 }
+
 
 // Mini logos
 .logo--icon {
