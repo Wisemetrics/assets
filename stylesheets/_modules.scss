@@ -380,3 +380,40 @@
     }
   }
 }
+
+.alert {
+  padding: $half-spacing-unit;
+  color: #c09853;
+  border: 1px solid #fbeed5;
+  background-color: #fcf8e3;
+  line-height: 1.2em;
+  @include border-radius(4px);
+  .alert-close {
+    text-decoration: none;
+    color: #c09853;
+    // position: relative;
+    // top: $half-spacing-unit / 2;
+    // right: $half-spacing-unit / 2;
+    // margin-left: $half-spacing-unit;
+    @include opacity(.8);
+    &:hover {
+      @include opacity(1);
+    }
+  }
+}
+.alert-error {
+  color: $orange;
+  border-color: #FEC8C8;
+  background-color: #FEF1F1;
+  .alert-close {
+    color: $orange;
+  }
+}
+.alert-notice {
+  color: #03B4D3;
+  border-color: #B6E4ED;
+  background-color: #F3FBFC;
+  .alert-close {
+    color: #03B4D3;
+  }
+}
