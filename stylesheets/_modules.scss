@@ -15,16 +15,16 @@
 
 .btn--icon {
   position: relative;
-  padding-left: 4em !important;
+  padding-left: 4.7em !important;
   .icon {
     border-right: 1px solid darken($background-nav, 30%);
     position: absolute;
     top: 0;
     left: 0;
     font-size: 1em;
-    line-height: 3em;
-    padding-left: .7em;
-    padding-right: .7em;
+    line-height: 3.3em;
+    padding-left: 1em;
+    padding-right: 1em;
     background: none;
   }
 }
@@ -142,7 +142,7 @@
   }
   .icon {
     @include font-size($h6-size, false);
-    line-height: 3em;
+    line-height: 3.3em;
     padding-left: 1em;
     padding-right: 1em;
   }
