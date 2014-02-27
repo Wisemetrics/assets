@@ -87,10 +87,26 @@
     }
   }
   #account {
-    width: 260px;
+    width: 200px;
     line-height: $header-height;
     margin-right: $half-spacing-unit;
+    display: inline-block;
+    vertical-align: middle;
+    .account-wrapper {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 12px;
+    }
+    a {
+      display: block;
+    }
+    a.username {
+      position: relative;
+    }
     img {
+      position: absolute;
+      left: -52px;
+      top: -10px;
       width: 42px;
       height: 42px;
       margin-right: $half-spacing-unit;
