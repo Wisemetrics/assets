@@ -37,7 +37,7 @@ $use-block-list:    false;
 $use-matrix:        true;
 $use-split:         false;
 $use-this-or-this:  false;
-$use-link-complex:  false;
+$use-link-complex:  false !default;
 $use-flyout:        false;
 $use-arrows:        false;
 $use-sprite:        false;
