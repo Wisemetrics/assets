@@ -466,3 +466,9 @@ you can use the generic selector below, but it's slower:
 .icon-refresh:before {
   content: "\e610";
 }
+.icon-bell:before {
+  content: "\e611";
+}
+.icon-bell-alt:before {
+  content: "\e612";
+}
