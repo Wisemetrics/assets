@@ -149,7 +149,11 @@
 }
 
 .btn--delta {
+  border-bottom: 0 none !important;
   @include font-size(10px, false);
+  .icon {
+    margin-right: $half-spacing-unit/2;
+  }
 }
 
 .btn--large {
@@ -195,7 +199,7 @@
 }
 
 .low {
-  text-transform: capitalize !important;
+  text-transform: lowercase !important;
 }
 
 // Custom classes
