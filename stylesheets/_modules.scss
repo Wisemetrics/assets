@@ -7,7 +7,7 @@
   line-height: 3.6em;
   height: 3.5em;
   @include single-transition(all, .3s);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($background-nav, 10%);
     border-bottom: .3em solid darken($background-nav, 30%);
   }
@@ -34,7 +34,7 @@
   background: none;
   border-bottom-color: transparent;
   // text-decoration: underline;
-  &:hover {
+  &:hover, &:focus {
     background: none;
     border-bottom-color: transparent;
   }
@@ -43,7 +43,7 @@
 .btn--pink {
   background-color: $pink;
   border-bottom-color: darken($pink, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($pink, 10%);
     border-bottom-color: darken($pink, 30%);
   }
@@ -55,7 +55,7 @@
 .btn--orange {
   background-color: $orange;
   border-bottom-color: darken($orange, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($orange, 10%);
     border-bottom-color: darken($orange, 30%);
   }
@@ -67,7 +67,7 @@
 .btn--green {
   background-color: $green;
   border-bottom-color: darken($green, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($green, 10%);
     border-bottom-color: darken($green, 30%);
   }
@@ -79,7 +79,7 @@
 .btn--blue {
   background-color: $blue;
   border-bottom-color: darken($blue, 10%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($blue, 10%);
     border-bottom-color: darken($blue, 20%);
   }
@@ -91,7 +91,7 @@
 .btn--violet {
   background-color: $violet;
   border-bottom-color: darken($violet, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($violet, 10%);
     border-bottom-color: darken($violet, 30%);
   }
@@ -104,7 +104,7 @@
   background-color: lighten($text,40%);
   color: $titles !important;
   border-bottom-color: lighten($text, 30%);
-  &:hover {
+  &:hover, &:focus {
     background-color: lighten($text,20%);
     border-bottom-color: $text;
   }
@@ -116,7 +116,7 @@
 .btn--dark-blue {
   background-color: lighten($dark-blue, 8%);
   border-bottom-color: darken($dark-blue, 10%);
-  &:hover {
+  &:hover, &:focus {
     background-color: $dark-blue;
     border-bottom-color: darken($dark-blue, 20%);
   }
@@ -166,7 +166,7 @@
   color: #FFF;
   background-color: $pink;
   border-bottom: .3em solid darken($pink, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($pink, 10%);
     border-bottom: .3em solid darken($pink, 30%);
   }
@@ -176,7 +176,7 @@
   color: #FFF;
   background-color: $violet;
   border-bottom: .3em solid darken($violet, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($violet, 10%);
     border-bottom: .3em solid darken($violet, 30%);
   }
