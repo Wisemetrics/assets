@@ -5,10 +5,11 @@
     background: $light-grey;
     line-height: 1.5em;
     height: 1.5em;
+    border-left: 1px solid $titles;
     span {
       @include inline-block;
       line-height: 1.5em;
-      height: 1.5em;
+      height: 1em;
       background: $violet;      
     }
   }
