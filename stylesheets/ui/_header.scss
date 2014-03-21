@@ -3,7 +3,7 @@
     line-height: 1;
     height: $header-height;
     font-size: 11px;
-    background: $background-header;
+    background: $theme-color-secondary;
     min-width: $content-min-width;
     a {
       color: #FFF;
@@ -76,6 +76,7 @@
     line-height: $header-height;
     width: $left-col-width;
     overflow: hidden;
+    background: $background-header;
     span {
     text-indent: -1000em;
       display: inline-block;
