@@ -27,7 +27,7 @@
       text-align: center;
       display: inline-block;
       padding: 0;
-      color: $nav-header;
+      color: $nav-header !important;
       position: relative;
       span {
         position: relative;
@@ -152,7 +152,7 @@
       line-height: $header-height;
       i {
         display: block;
-        font-family: ttb;
+        font-family: opensans, Helvetica, Arial, sans-serif;
         font-size: 10px;
         position: absolute;
         font-style: normal;
