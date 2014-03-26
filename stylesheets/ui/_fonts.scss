@@ -37,7 +37,7 @@
 @if ($use-brandon-font == true) {
   $brandon: "brandon_bld-webfont";
   @include font-face("brandon", font-files("#{$brandon}.woff","#{$brandon}.ttf","#{$brandon}.svg"),"#{$brandon}.eot",bold);
-  h2, h3, h4, h5, h6, th, .btn, .nav {
+  h2, h3, h4, h5, h6, th, .btn, header .nav {
     font-family: brandon, Helvetica, Arial, sans-serif;
   }
 }

@@ -50,12 +50,22 @@ strong, b {
   text-decoration: line-through;
 }
 .thin {
-  font-family: ttr;
-  font-weight: normal;
+  @if $use-titillium-font{
+    font-family: ttr;
+    font-weight: normal;
+  }
+  @else {
+    font-weight: normal;
+  }
 }
 .thick {
-  font-family: ttb;
-  font-weight: normal;  
+  @if $use-titillium-font{
+    font-family: ttb;
+    font-weight: normal;
+  }
+  @else {
+    font-weight: bold;
+  }
 }
 .ovh {
   overflow: hidden;
