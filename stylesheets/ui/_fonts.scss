@@ -15,6 +15,33 @@
   }
 }
 
+@if ($use-opensans-font == true) {
+  $opensansregular: "opensans-regular-webfont";
+  $opensanssemibold: "opensans-semibold-webfont";
+  @include font-face("opensans", font-files("#{$opensansregular}.woff","#{$opensansregular}.ttf","#{$opensansregular}.svg"),"#{$opensansregular}.eot");
+  @include font-face("opensans", font-files("#{$opensanssemibold}.woff","#{$opensanssemibold}.ttf","#{$opensanssemibold}.svg"),"#{$opensanssemibold}.eot",bold);
+
+  body {
+    font-family: opensans, Helvetica, Arial, sans-serif;
+  }
+}
+
+@if ($use-adelle-font == true) {
+  $adelle: "adelle-regular-webfont";
+  @include font-face("adelle", font-files("#{$adelle}.woff","#{$adelle}.ttf","#{$adelle}.svg"),"#{$adelle}.eot",bold);
+  h1 {
+    font-family: adelle, Times, Georgia, serif;
+  }
+}
+
+@if ($use-brandon-font == true) {
+  $brandon: "brandon_bld-webfont";
+  @include font-face("brandon", font-files("#{$brandon}.woff","#{$brandon}.ttf","#{$brandon}.svg"),"#{$brandon}.eot",bold);
+  h2, h3, h4, h5, h6, th, .btn {
+    font-family: brandon, Helvetica, Arial, sans-serif;
+  }
+}
+
 // Klavika
 @if ($use-klavika-font == true) {
   @include font-face("klavika", font-files("klavikalight-italicosf-webfont.woff", "klavikalight-italicosf-webfont.ttf", "klavikalight-italicosf-webfont.svg", "klavikalight-italicosf-webfont.eot"));

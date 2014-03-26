@@ -76,15 +76,26 @@
     line-height: $header-height;
     width: $left-col-width;
     overflow: hidden;
-    background: $background-header;
     span {
-    text-indent: -1000em;
+      text-indent: -1000em;
       display: inline-block;
       background: image-url("big_logo_grey.png") no-repeat 0 0;
       width: 145px;
       height: 38px;
       line-height: 38px;
       @include background-size(cover);
+    }
+    .narrow & {
+      margin: ($header-height - 28px)/2 170px ($header-height - 28px)/2 46px;
+      line-height: 24px;
+      text-align: center !important;
+      width: 28px;
+      border: 2px solid #FFF;
+      height: 28px;
+      @include border-radius(50%);
+      span {
+        width: 38px;
+      }
     }
   }
   #account {
@@ -176,15 +187,16 @@
       border: none;
     }
     .read {
-      background: $light-grey;
+      background: lighten($light-grey, 10%);
     }
     a:first-child {
       display: block;
       padding: $half-spacing-unit $half-spacing-unit*1.5 $half-spacing-unit $half-spacing-unit*1.5 + 40px;
       color: $text !important;
       b {
+        text-transform: uppercase;
         display: block;
-        font-family: ttb;
+        font-family: brandon;
       }
       .icon {
         position: absolute;
