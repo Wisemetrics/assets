@@ -74,27 +74,26 @@
   .logo {
     display: block;
     line-height: $header-height;
+    height: $header-height;
     width: $left-col-width;
-    overflow: hidden;
+    position: relative;
     span {
       text-indent: -1000em;
       display: inline-block;
-      background: image-url("big_logo_grey.png") no-repeat 0 0;
+      background: image-url("big_logo_white.png") no-repeat 0 0;
       width: 145px;
       height: 38px;
       line-height: 38px;
       @include background-size(cover);
     }
     .narrow & {
-      margin: ($header-height - 28px)/2 170px ($header-height - 28px)/2 46px;
-      line-height: 24px;
-      text-align: center !important;
-      width: 28px;
-      border: 2px solid #FFF;
-      height: 28px;
-      @include border-radius(50%);
       span {
-        width: 38px;
+        position: absolute;
+        overflow: hidden;
+        top: 9px;
+        left: 38px;
+        width: 42px;
+        height: 42px;
       }
     }
   }
