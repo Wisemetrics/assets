@@ -82,6 +82,10 @@
       @include triangle(bottom,14px,half,$light-grey);
     }
   }
+  .tip-right .tip-arrow-top,
+  .tip-right .tip-arrow-bottom {
+    left: 24px;
+  }
   .tip-yellow .tip-arrow-left {
     margin-top:-7px;
     top:50%;
