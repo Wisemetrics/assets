@@ -2,7 +2,7 @@
   .progress-bar {
     @include inline-block;
     width: 100%;
-    background: $light-grey;
+    // background: $light-grey;
     line-height: 1.5em;
     height: 1.5em;
     border-left: 1px solid $titles;
