@@ -13,4 +13,11 @@
       background: $violet;      
     }
   }
+  .progress-bar--full {
+    border-left: none;
+    line-height: 1;
+    span {
+      height: 1.5em;      
+    }
+  }
 }
