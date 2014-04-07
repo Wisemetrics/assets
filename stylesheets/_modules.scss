@@ -228,7 +228,7 @@
 
 .radio {
   display: inline;
-  @include user-select(none);
+  @include experimental('user-select',none);
   input {
     display: none;
     &:checked + span {
@@ -242,7 +242,7 @@
 
 .checkbox {
   display: inline;
-  @include user-select(none);
+  @include experimental('user-select',none);
   input {
     display: none;
     &:checked + span {
@@ -256,7 +256,7 @@
 
 .toggle {
   @include inline-block;
-  @include user-select(none);
+  @include experimental('user-select',none);
   input {
     display: none;
     & + span {    
