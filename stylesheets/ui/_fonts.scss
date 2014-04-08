@@ -21,7 +21,7 @@
   @include font-face("opensans", font-files("#{$opensansregular}.woff","#{$opensansregular}.ttf","#{$opensansregular}.svg"),"#{$opensansregular}.eot");
   @include font-face("opensans", font-files("#{$opensanssemibold}.woff","#{$opensanssemibold}.ttf","#{$opensanssemibold}.svg"),"#{$opensanssemibold}.eot",bold);
 
-  body {
+  body, .opensans {
     font-family: opensans, Helvetica, Arial, sans-serif;
   }
 }
@@ -29,7 +29,7 @@
 @if ($use-adelle-font == true) {
   $adelle: "adelle-regular-webfont";
   @include font-face("adelle", font-files("#{$adelle}.woff","#{$adelle}.ttf","#{$adelle}.svg"),"#{$adelle}.eot",bold);
-  h1 {
+  h1, .adelle {
     font-family: adelle, Times, Georgia, serif;
   }
 }
@@ -37,7 +37,7 @@
 @if ($use-brandon-font == true) {
   $brandon: "brandon_bld-webfont";
   @include font-face("brandon", font-files("#{$brandon}.woff","#{$brandon}.ttf","#{$brandon}.svg"),"#{$brandon}.eot",bold);
-  h2, h3, h4, h5, h6, th, .btn, header .nav {
+  h2, h3, h4, h5, h6, th, .btn, header .nav, .brandon {
     font-family: brandon, Helvetica, Arial, sans-serif;
   }
 }
@@ -513,4 +513,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-revert:before {
   content: "\e617";
+}
+.icon-google-plus:before {
+  content: "\e618";
 }
