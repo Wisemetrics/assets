@@ -6,7 +6,7 @@ Highcharts.theme =
     borderRadius: 0
     backgroundColor: "#EBECEF"
     style:
-      fontFamily: 'ttr'
+      fontFamily: 'brandon'
 
   colors: ["#ff008d", "#545255", "#71c1a0", "#5d4b95", "#5d5356", "#818285", "#dddde1"]
 
@@ -23,7 +23,7 @@ Highcharts.theme =
     x: 50
     style:
       color: "#818285"
-      font: "16px ttr"
+      font: "16px brandon"
       textTransform: "uppercase"
 
   plotOptions:
