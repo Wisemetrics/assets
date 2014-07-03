@@ -101,7 +101,7 @@ strong, b {
           border-color: transparent transparent transparent scale_color($color,$lightness: 90%);
         }
       }
-    }    
+    }
   }
 }
 
@@ -193,7 +193,7 @@ strong, b {
       i {
         background: $orange;
       }
-    }    
+    }
   }
 }
 
@@ -421,16 +421,27 @@ strong, b {
 
 
 // Mini logos
-.logo--icon {
+.logo--icon.icon {
+  color: #FFF;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  display: inline-block;
+}
+.logo--icon, input:checked + .logo--icon {
   &.icon {
     background: $dark-blue;
-    color: #FFF;
-    padding: 0 4px;
-    height: 20px;
-    line-height: 20px;
-    display: inline-block;
   }
   &.icon-twitter {
-    background: $blue;    
+    background: $blue;
   }
+}
+.checkbox .logo--icon {
+  background: $light-grey;
+  height: 26px;
+  width: 26px;
+  line-height: 26px;
+  font-size: $h3-size;
 }
