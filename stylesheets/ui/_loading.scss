@@ -1,0 +1,108 @@
+@if ($use-loading == true) {
+  .pageload-overlay {
+  	position: fixed;
+  	width: 100%;
+  	height: 100%;
+  	top: 0;
+  	left: 0;
+  	display: none;
+    background: rgba(#FFF,.8);
+    z-index: 1000;
+  }
+
+  .pageload-overlay.show {
+  	visibility: visible;
+  }
+
+  .pageload-overlay::after,
+  .pageload-overlay::before {
+  	content: '';
+  	position: fixed;
+  	width: 30px;
+  	height: 30px;
+  	top: 50%;
+  	left: 50%;
+  	margin: -15px 0 0 -15px;
+  	border-radius: 50%;
+  	visibility: hidden;
+  	opacity: 0;
+  	z-index: 1000;
+  	-webkit-transition: opacity 0.15s, visibility 0s 0.15s;
+  	transition: opacity 0.15s, visibility 0s 0.15s;
+  }
+
+  .pageload-overlay::after {
+  	background: $theme-color-secondary;
+  	-webkit-transform: translateX(-20px);
+  	transform: translateX(-20px);
+  	-webkit-animation: moveRight .7s linear infinite alternate;
+  	animation: moveRight .7s linear infinite alternate;
+  }
+
+  .pageload-overlay::before {
+  	background: darken($theme-color-secondary, 20%);
+  	-webkit-transform: translateX(20px);
+  	transform: translateX(20px);
+  	-webkit-animation: moveLeft .7s linear infinite alternate;
+  	animation: moveLeft .7s linear infinite alternate;
+  }
+
+  @include keyframes(moveRight) {
+    0% {
+      @include translateX(-20px);
+    }
+    100% {
+      @include translateX(20px);
+    }
+  }
+
+  @include keyframes(moveLeft) {
+    0% {
+      @include translateX(20px);
+    }
+    100% {
+      @include translateX(-20px);
+    }
+  }
+
+
+  // @-webkit-keyframes moveRight {
+  // 	to {
+  //     -webkit-transform: translateX(20px);
+  //     z-index: 10;
+  //   }
+  // }
+  //
+  // @keyframes moveRight {
+  // 	to {
+  //     transform: translateX(20px);
+  //     z-index: 10;
+  //   }
+  // }
+  //
+  // @-webkit-keyframes moveLeft {
+  // 	to {
+  //     -webkit-transform: translateX(-20px);
+  //     z-index: 9;
+  //   }
+  // }@@
+  //
+  // @keyframes moveLeft {
+  // 	to {
+  //     transform: translateX(-20px);
+  //     z-index: 9;
+  //   }
+  // }
+
+  .pageload-loading.pageload-overlay {
+    display: block;
+  }
+
+  .pageload-loading.pageload-overlay::after,
+  .pageload-loading.pageload-overlay::before {
+  	opacity: 1;
+  	visibility: visible;
+  	-webkit-transition: opacity 0.3s;
+  	transition: opacity 0.3s;
+  }
+}
