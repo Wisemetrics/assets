@@ -526,3 +526,9 @@ you can use the generic selector below, but it's slower:
 .icon-play:before {
   content: "\e61b";
 }
+.icon-chevron-up:before {
+	content: "\e61c";
+}
+.icon-chevron-down:before {
+	content: "\e61d";
+}
