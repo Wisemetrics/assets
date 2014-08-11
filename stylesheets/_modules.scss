@@ -715,6 +715,14 @@ strong, b {
 .soft-quarter--ends     { padding-top:   $half-spacing-unit / 2 !important; padding-bottom:$half-spacing-unit / 2 !important; }
 .soft-quarter--sides    { padding-right: $half-spacing-unit / 2 !important; padding-left:  $half-spacing-unit / 2 !important; }
 
+.push-quarter           { margin:       $half-spacing-unit / 2 !important; }
+.push-quarter--top      { margin-top:   $half-spacing-unit / 2 !important; }
+.push-quarter--right    { margin-right: $half-spacing-unit / 2 !important; }
+.push-quarter--bottom   { margin-bottom:$half-spacing-unit / 2 !important; }
+.push-quarter--left     { margin-left:  $half-spacing-unit / 2 !important; }
+.push-quarter--ends     { margin-top:   $half-spacing-unit / 2 !important; padding-bottom:$half-spacing-unit / 2 !important; }
+.push-quarter--sides    { margin-right: $half-spacing-unit / 2 !important; padding-left:  $half-spacing-unit / 2 !important; }
+
 // Separators
 .bd,
 .bd-top,
