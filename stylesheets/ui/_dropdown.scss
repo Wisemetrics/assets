@@ -3,7 +3,7 @@
 }
 
 .dropdown__toggle {
-  
+
 }
 
 .dropdown__menu {
@@ -20,7 +20,7 @@
 
 .dropdown--simple {
   min-width: 100%;
-  a {
+  > li > a {
     display: block;
     padding: $half-spacing-unit/2 $half-spacing-unit;
     text-decoration: none;
