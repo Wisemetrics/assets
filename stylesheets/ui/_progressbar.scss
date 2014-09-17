@@ -10,14 +10,14 @@
       @include inline-block;
       line-height: 1em;
       height: 1em;
-      background: $violet;
+      background: $theme-color-primary;
     }
   }
   .progress-bar--full {
     border-left: none;
     line-height: 1.5;
     height: 1.5em;
-    background: $light_violet;      
+    background: lighten($theme-color-primary,20%);      
     span {
       display: block;
       line-height: 1.5em;
