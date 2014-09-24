@@ -136,7 +136,7 @@
         display: block;
         content: '';
         bottom: -1px;
-        z-index: 2;
+        z-index: 100001;
         left: -6px;
         @include triangle(top,3em,half,$white);
       }
@@ -165,7 +165,7 @@
         color: $white;
         @include border-radius(24px);
       }
-    }      
+    }
   }
   .notifications__list {
     list-style: none;
