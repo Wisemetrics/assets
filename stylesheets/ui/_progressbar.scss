@@ -2,14 +2,32 @@
   .progress-bar {
     @include inline-block;
     width: 100%;
-    background: $light-grey;
-    line-height: 1.5em;
-    height: 1.5em;
+    // background: $light-grey;
+    line-height: 1em;
+    height: 1em;
+    border-left: 1px solid $titles;
     span {
       @include inline-block;
+      line-height: 1em;
+      height: 1em;
+      background: $theme-color-primary;
+    }
+  }
+  .progress-bar--full {
+    border-left: none;
+    line-height: 1.5;
+    height: 1.5em;
+    background: lighten($theme-color-primary,20%);      
+    span {
+      display: block;
       line-height: 1.5em;
       height: 1.5em;
-      background: $violet;      
+    }
+  }
+  .progress-bar--white {
+    background: rgba($white, .3);
+    span {
+      background: $white;
     }
   }
 }

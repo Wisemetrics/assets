@@ -3,7 +3,7 @@
     line-height: 1;
     height: $header-height;
     font-size: 11px;
-    background: $background-header;
+    background: $theme-color-secondary;
     min-width: $content-min-width;
     a {
       color: #FFF;
@@ -27,7 +27,7 @@
       text-align: center;
       display: inline-block;
       padding: 0;
-      color: $nav-header;
+      color: $nav-header !important;
       position: relative;
       span {
         position: relative;
@@ -74,23 +74,51 @@
   .logo {
     display: block;
     line-height: $header-height;
+    height: $header-height;
     width: $left-col-width;
-    overflow: hidden;
+    position: relative;
     span {
-    text-indent: -1000em;
+      text-indent: -1000em;
       display: inline-block;
-      background: image-url("big_logo_grey.png") no-repeat 0 0;
+      background: image-url("big_logo_white.png") no-repeat 0 0;
       width: 145px;
       height: 38px;
       line-height: 38px;
       @include background-size(cover);
+    }
+    .narrow & {
+      span {
+        position: absolute;
+        overflow: hidden;
+        top: 9px;
+        left: 38px;
+        width: 42px;
+        height: 42px;
+      }
     }
   }
   #account {
     width: 200px;
     line-height: $header-height;
     margin-right: $half-spacing-unit;
+    display: inline-block;
+    vertical-align: middle;
+    .account-wrapper {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 12px;
+      padding-left: 52px;
+    }
+    a {
+      display: block;
+    }
+    a.username {
+      position: relative;
+    }
     img {
+      position: absolute;
+      left: -52px;
+      top: -10px;
       width: 42px;
       height: 42px;
       margin-right: $half-spacing-unit;
@@ -100,87 +128,136 @@
   }
   #notifications {
     position: relative;
-    line-height: $header-height - 28px;
-    margin-right: $base-spacing-unit*2;
-    padding-top:  28px;
+    line-height: $header-height;
+    // margin-right: $base-spacing-unit*2;
     &.open {
       &:before {
         position: absolute;
         display: block;
         content: '';
         bottom: -1px;
-        z-index: 2;
-        left: 0;
+        z-index: 100001;
+        left: -6px;
         @include triangle(top,3em,half,$white);
       }
     }
+  }
+  .notifications {
+    height: $header-height;
     > .icon {
       color: $text;
       position: relative;
-      font-size: 28px;
+      font-size: 20px;
+      line-height: $header-height;
       i {
         display: block;
-        font-family: ttb;
-        font-size: 14px;
+        font-family: opensans, Helvetica, Arial, sans-serif;
+        font-size: 10px;
         position: absolute;
         font-style: normal;
         top: -10px;
         right: -10px;
         width: 20px;
         height: 20px;
-        line-height: 20px;
+        line-height: 21px;
         text-align: center;
         background: $orange;
         color: $white;
         @include border-radius(24px);
       }
     }
+  }
+  .notifications__list {
+    list-style: none;
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    background: $white;
+    left: -57px;
+    border: 1px solid $light-grey;
+    overflow: auto;
+    max-height: 236px;
+  }
+  .notification__item {
+    border-bottom: 1px solid $light-grey;
+    position: relative;
+    &:last-child {
+      border: none;
+    }
+    .read {
+      background: lighten($light-grey, 10%);
+    }
+    a:first-child {
+      display: block;
+      padding: $half-spacing-unit $half-spacing-unit*1.5 $half-spacing-unit $half-spacing-unit*1.5 + 40px;
+      color: $text !important;
+      b {
+        text-transform: uppercase;
+        display: block;
+        font-family: brandon;
+      }
+      .icon {
+        position: absolute;
+        font-size: 20px;
+        left: $half-spacing-unit*1.5;
+      }
+    }
+    .hide {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 2;
+      padding: 0;
+      input + span {
+        color: $light-grey;
+      }
+      input:checked + span {
+        color: darken($light-grey, 10%);
+      }
+    }
+  }
+  .toolbar {
+    .dropdown__toggle {
+      color: $light-grey !important;
+      padding: 3px;
+      &:hover {
+        background: $titles;
+        color: #FFF !important;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    &.open {
+      .dropdown__toggle {
+        background: $titles;
+        color: #FFF !important;
+      }
+    }
     ul {
       list-style: none;
       line-height: 1em;
       padding: 0;
-      margin: 0;
-      width: 300px;
+      margin: -2px 0;
+      width: 150px;
       background: $white;
-      left: -30px;
-      border: 1px solid $light-grey;
+      right: 0;
+      border: 1px solid $titles;
       overflow: auto;
       max-height: 236px;
+      z-index: 10;
     }
     li {
-      border-bottom: 1px solid $light-grey;
-      position: relative;
-      &:last-child {
-        border: none;
-      }
-      .read {
-        background: $light-grey;
-      }
-      a:first-child {
+      a {
         display: block;
-        padding: $half-spacing-unit $half-spacing-unit*1.5 $half-spacing-unit $half-spacing-unit*1.5 + 40px;
-        color: $text;
+        padding: 6px 12px;
         b {
           display: block;
           font-family: ttb;
         }
-        .icon {
-          position: absolute;
-          font-size: 20px;
-          left: $half-spacing-unit*1.5;
-        }        
-      }
-      .hide {
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        z-index: 2;
-        padding: 0;
-        input + span {
-          color: $light-grey;
-        }
-        input:checked + span {
-          color: darken($light-grey, 10%);          
+        &:hover {
+          background: $light-grey !important;
         }
       }
     }

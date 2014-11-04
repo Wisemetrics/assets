@@ -15,6 +15,33 @@
   }
 }
 
+@if ($use-opensans-font == true) {
+  $opensansregular: "opensans-regular-webfont";
+  $opensanssemibold: "opensans-semibold-webfont";
+  @include font-face("opensans", font-files("#{$opensansregular}.woff","#{$opensansregular}.ttf","#{$opensansregular}.svg"),"#{$opensansregular}.eot");
+  @include font-face("opensans", font-files("#{$opensanssemibold}.woff","#{$opensanssemibold}.ttf","#{$opensanssemibold}.svg"),"#{$opensanssemibold}.eot",bold);
+
+  body, .opensans {
+    font-family: opensans, Helvetica, Arial, sans-serif;
+  }
+}
+
+@if ($use-adelle-font == true) {
+  $adelle: "adelle-regular-webfont";
+  @include font-face("adelle", font-files("#{$adelle}.woff","#{$adelle}.ttf","#{$adelle}.svg"),"#{$adelle}.eot",bold);
+  h1, .adelle {
+    font-family: adelle, Times, Georgia, serif;
+  }
+}
+
+@if ($use-brandon-font == true) {
+  $brandon: "brandon_bld-webfont";
+  @include font-face("brandon", font-files("#{$brandon}.woff","#{$brandon}.ttf","#{$brandon}.svg"),"#{$brandon}.eot",bold);
+  h2, h3, h4, h5, h6, th, .btn, header .nav, .brandon {
+    font-family: brandon, Helvetica, Arial, sans-serif;
+  }
+}
+
 // Klavika
 @if ($use-klavika-font == true) {
   @include font-face("klavika", font-files("klavikalight-italicosf-webfont.woff", "klavikalight-italicosf-webfont.ttf", "klavikalight-italicosf-webfont.svg", "klavikalight-italicosf-webfont.eot"));
@@ -450,4 +477,73 @@ you can use the generic selector below, but it's slower:
 }
 .icon-pencil:before {
   content: "\e60a";
+}
+.icon-stopwatch:before {
+  content: "\e60d";
+}
+.icon-bullhorn:before {
+  content: "\e60b";
+}
+.icon-cogs:before {
+  content: "\e60e";
+}
+.icon-repeat:before {
+  content: "\e60f";
+}
+.icon-refresh:before {
+  content: "\e610";
+}
+.icon-bell:before {
+  content: "\e611";
+}
+.icon-bell-alt:before {
+  content: "\e612";
+}
+.icon-linkedin-sign:before, .icon-linkedin:before {
+  content: "\e613";
+}
+.icon-compose-2:before {
+  content: "\e614";
+}
+.icon-pull:before {
+  content: "\e615";
+}
+.icon-blank-flow:before {
+  content: "\e616";
+}
+.icon-revert:before {
+  content: "\e617";
+}
+.icon-google-plus:before {
+  content: "\e618";
+}
+.icon-in:before {
+  content: "\e61a";
+}
+.icon-out:before {
+  content: "\e619";
+}
+.icon-play:before {
+  content: "\e61b";
+}
+.icon-chevron-up:before {
+	content: "\e61c";
+}
+.icon-chevron-down:before {
+	content: "\e61d";
+}
+.icon-next:before {
+	content: "\e61e";
+}
+.icon-polaroid-2:before {
+	content: "\e620";
+}
+.icon-rss:before {
+	content: "\e61f";
+}
+.icon-envelope:before {
+	content: "\e621";
+}
+.icon-infor:before {
+  content: "\e622";
 }

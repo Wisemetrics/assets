@@ -3,7 +3,7 @@
 }
 
 .dropdown__toggle {
-  
+
 }
 
 .dropdown__menu {
@@ -11,9 +11,23 @@
   top: 100%;
   list-style: none;
   margin: 0;
-  z-index: 1;
+  z-index: 100000;
   display: none;
   .open & {
     display: block;
+  }
+}
+
+.dropdown--simple {
+  min-width: 100%;
+  > li > a {
+    display: block;
+    padding: $half-spacing-unit/2 $half-spacing-unit;
+    text-decoration: none;
+    color: $text;
+    &:hover {
+      background: lighten($theme-color-primary,30%);
+      color: $theme-color-primary;
+    }
   }
 }

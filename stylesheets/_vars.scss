@@ -23,30 +23,30 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         true;
-$use-flexbox:       true;
-$use-columns:       true;
-$use-nav:           true;
-$use-options:       false;
-$use-pagination:    false;
-$use-breadcrumb:    false;
-$use-media:         false;
-$use-marginalia:    false;
-$use-island:        true;
-$use-block-list:    false;
-$use-matrix:        true;
-$use-split:         false;
-$use-this-or-this:  false;
-$use-link-complex:  false;
-$use-flyout:        false;
-$use-arrows:        false;
-$use-sprite:        false;
-$use-icon-text:     true;
-$use-beautons:      true;
-$use-lozenges:      false;
-$use-rules:         false;
-$use-stats:         false;
-$use-greybox:       true;
+$use-grids:         true !default;
+$use-flexbox:       true !default;
+$use-columns:       true !default;
+$use-nav:           true !default;
+$use-options:       false !default;
+$use-pagination:    false !default;
+$use-breadcrumb:    false !default;
+$use-media:         false !default;
+$use-marginalia:    false !default;
+$use-island:        true !default;
+$use-block-list:    false !default;
+$use-matrix:        true !default;
+$use-split:         false !default;
+$use-this-or-this:  false !default;
+$use-link-complex:  false !default;
+$use-flyout:        false !default;
+$use-arrows:        false !default;
+$use-sprite:        false !default;
+$use-icon-text:     true !default;
+$use-beautons:      true !default;
+$use-lozenges:      false !default;
+$use-rules:         false !default;
+$use-stats:         false !default;
+$use-greybox:       true !default;
 
 
 
@@ -58,6 +58,9 @@ $use-greybox:       true;
 /**
  * Place any variables that should override inuit.css’ defaults here.
  */
+
+$base-line-height:  24px!default;
+
 $h1-size:           32px!default; // .alpha
 $h2-size:           24px!default; // .beta
 $h3-size:           18px!default; // .gamma
@@ -74,6 +77,9 @@ $english-quotes: true;
  * Place any of your own variables that sit on top of inuit.css here.
  */
 
+$use-opensans-font:     false!default;
+$use-adelle-font:       false!default;
+$use-brandon-font:      false!default;
 $use-titillium-font:    true!default;
 $use-klavika-font:      false!default;
 $use-sidenav:           true!default;
@@ -81,8 +87,9 @@ $use-backgrid:          true!default;
 $use-header:            true!default;
 $use-country-select:    false!default;
 $use-progressbar:       false!default;
+$use-loading:           false!default;
 $use-flags:             false!default;
-$use-qtip:              false!default;
+$use-tooltips:          false!default;
 $left-col-width:        180px!default;
 $content-min-width:     800px!default;
 $header-height:         130px!default;
@@ -101,22 +108,22 @@ $green:                 #73A42E;
 $blue:                  #18bfdd;
 $dark-blue: 			      #3B5998;
 $colors: $pink $violet $orange $green $blue $dark-blue;
-$headline:              #A56E8A;
-$light-grey:            #dddde1;
-$titles:                #5F5F5F;
-$titles-small:          #BCBDC3;
-$text:                  #818285;
-$nav:                   #8c8d92;
-$nav-header:            #ABABAB;
-$background-page:       #F0F0F3;
-$background-section:    $white;
-$background-testimonial:#2A2A2A;
-$background-header:     #353535;
-$background-nav:        $titles;
-$background-nav-enabled:#474747;
-$background-features:   #F3F4F8;
-$background-footer:     #3e2637;
-$background-orange:     #e9e4e4;
+$headline:              #A56E8A!default;
+$light-grey:            #dddde1!default;
+$titles:                #5F5F5F!default;
+$titles-small:          #BCBDC3!default;
+$text:                  #818285!default;
+$nav:                   #8c8d92!default;
+$nav-header:            lighten(#ABABAB, 20%);
+$background-page:       #F0F0F3!default;
+$background-section:    $white!default;
+$background-testimonial:#2A2A2A!default;
+$background-header:     #353535!default;
+$background-nav:        $titles!default;
+$background-nav-enabled:#474747!default;
+$background-features:   #F3F4F8!default;
+$background-footer:     #3e2637!default;
+$background-orange:     #e9e4e4!default;
 $baseBorderRadius:      0;
 $borderRadiusLarge:     0;
 $borderRadiusSmall:     0;

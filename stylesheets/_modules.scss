@@ -1,3 +1,4 @@
+@import 'vars';
 .btn {
   color: #FFF !important;
   background-color: $background-nav;
@@ -7,7 +8,7 @@
   line-height: 3.6em;
   height: 3.5em;
   @include single-transition(all, .3s);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($background-nav, 10%);
     border-bottom: .3em solid darken($background-nav, 30%);
   }
@@ -15,26 +16,43 @@
 
 .btn--icon {
   position: relative;
-  padding-left: 4em !important;
+  padding-left: 4.7em !important;
   .icon {
     border-right: 1px solid darken($background-nav, 30%);
     position: absolute;
     top: 0;
     left: 0;
     font-size: 1em;
-    line-height: 3em;
-    padding-left: .7em;
-    padding-right: .7em;
+    line-height: 3.4em;
+    padding-left: 1em;
+    padding-right: 1em;
     background: none;
   }
 }
 
+.btn--toggle {
+  position: relative;
+  padding-right: 4.7em !important;
+  .icon-caret-down {
+    border-left: 1px solid darken($background-nav, 30%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1em;
+    line-height: 3.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: none;
+    margin-right: 0 !important;
+  }
+}
+
 .btn--transparent {
-  color: $background-nav;
+  color: $background-nav !important;
   background: none;
   border-bottom-color: transparent;
-  text-decoration: underline;
-  &:hover {
+  // text-decoration: underline;
+  &:hover, &:focus {
     background: none;
     border-bottom-color: transparent;
   }
@@ -43,36 +61,36 @@
 .btn--pink {
   background-color: $pink;
   border-bottom-color: darken($pink, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($pink, 10%);
     border-bottom-color: darken($pink, 30%);
   }
   .icon {
-    border-right-color: darken($pink, 30%);
+    border-color: darken($pink, 30%) !important;
   }
 }
 
 .btn--orange {
   background-color: $orange;
   border-bottom-color: darken($orange, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($orange, 10%);
     border-bottom-color: darken($orange, 30%);
   }
   .icon {
-    border-right-color: darken($orange, 30%);
+    border-color: darken($orange, 20%) !important;
   }
 }
 
 .btn--green {
   background-color: $green;
   border-bottom-color: darken($green, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($green, 10%);
     border-bottom-color: darken($green, 30%);
   }
   .icon {
-    border-right-color: darken($green, 30%);
+    border-color: darken($green, 30%) !important;
   }
 }
 
@@ -91,12 +109,12 @@
 .btn--violet {
   background-color: $violet;
   border-bottom-color: darken($violet, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($violet, 10%);
     border-bottom-color: darken($violet, 30%);
   }
   .icon {
-    border-right-color: darken($violet, 30%);
+    border-color: darken($violet, 30%) !important;
   }
 }
 
@@ -104,24 +122,27 @@
   background-color: lighten($text,40%);
   color: $titles !important;
   border-bottom-color: lighten($text, 30%);
-  &:hover {
+  &:hover, &:focus {
     background-color: lighten($text,20%);
     border-bottom-color: $text;
   }
   .icon {
-    border-right-color: lighten($text,20%);
+    border-color: lighten($text,20%) !important;
+  }
+  &.bd {
+    border-bottom: 1px solid $light-grey !important;
   }
 }
 
 .btn--dark-blue {
   background-color: $dark-blue;
   border-bottom-color: darken($dark-blue, 10%);
-  &:hover {
-    background-color: darken($dark-blue, 10%);
+  &:hover, &:focus {
+    background-color: $dark-blue;
     border-bottom-color: darken($dark-blue, 20%);
   }
   .icon {
-    border-right-color: lighten($dark-blue,5%);
+    border-color: lighten($dark-blue,20%) !important;
   }
 }
 
@@ -142,14 +163,18 @@
   }
   .icon {
     @include font-size($h6-size, false);
-    line-height: 3.2em;
+    line-height: 3.3em;
     padding-left: 1em;
     padding-right: 1em;
   }
 }
 
 .btn--delta {
+  border-bottom-width: 0 !important;
   @include font-size(10px, false);
+  .icon {
+    margin-right: $half-spacing-unit/2;
+  }
 }
 
 .btn--large {
@@ -162,7 +187,7 @@
   color: #FFF;
   background-color: $pink;
   border-bottom: .3em solid darken($pink, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($pink, 10%);
     border-bottom: .3em solid darken($pink, 30%);
   }
@@ -172,7 +197,7 @@
   color: #FFF;
   background-color: $violet;
   border-bottom: .3em solid darken($violet, 20%);
-  &:hover {
+  &:hover, &:focus {
     background-color: darken($violet, 10%);
     border-bottom: .3em solid darken($violet, 30%);
   }
@@ -195,7 +220,7 @@
 }
 
 .low {
-  text-transform: capitalize !important;
+  text-transform: lowercase !important;
 }
 
 // Custom classes
@@ -207,7 +232,7 @@
 
 .radio {
   display: inline;
-  @include user-select(none);
+  @include experimental('user-select',none);
   input {
     display: none;
     &:checked + span {
@@ -221,7 +246,7 @@
 
 .checkbox {
   display: inline;
-  @include user-select(none);
+  @include experimental('user-select',none);
   input {
     display: none;
     &:checked + span {
@@ -235,7 +260,7 @@
 
 .toggle {
   @include inline-block;
-  @include user-select(none);
+  @include experimental('user-select',none);
   input {
     display: none;
     & + span {
@@ -379,4 +404,375 @@
       }
     }
   }
+}
+
+.alert {
+  padding: $half-spacing-unit;
+  color: #c09853;
+  border: 1px solid #fbeed5;
+  background-color: #fcf8e3;
+  line-height: 1.2em;
+  @include border-radius(4px);
+  .alert-close {
+    text-decoration: none;
+    color: #c09853;
+    // position: relative;
+    // top: $half-spacing-unit / 2;
+    // right: $half-spacing-unit / 2;
+    // margin-left: $half-spacing-unit;
+    @include opacity(.8);
+    &:hover {
+      @include opacity(1);
+    }
+  }
+}
+.alert-error {
+  color: $orange;
+  border-color: #FEC8C8;
+  background-color: #FEF1F1;
+  .alert-close {
+    color: $orange;
+  }
+}
+.alert-notice {
+  color: #03B4D3;
+  border-color: #B6E4ED;
+  background-color: #F3FBFC;
+  .alert-close {
+    color: #03B4D3;
+  }
+}
+
+
+/***
+  Wise components
+***/
+
+strong, b {
+  color: $titles;
+}
+
+// Display helpers
+.block {
+  display: block !important;
+}
+.inline {
+  display: inline !important;
+}
+.inline-block {
+  @include inline-block;
+}
+.clear {
+  clear: both;
+}
+.strike {
+  text-decoration: line-through;
+}
+.thin {
+  @if $use-titillium-font{
+    font-family: ttr;
+    font-weight: normal;
+  }
+  @else {
+    font-weight: normal;
+  }
+}
+.thick {
+  @if $use-titillium-font{
+    font-family: ttb;
+    font-weight: normal;
+  }
+  @else {
+    font-weight: bold;
+  }
+}
+.ovh {
+  overflow: hidden;
+}
+.single-line {
+  line-height: 1 !important;
+}
+
+.rule {
+  line-height: 1;
+  span {
+    background: #FFF;
+    padding: 0 $half-spacing-unit;
+    top: .6em;
+    position: relative;
+    @include inline-block;
+  }
+}
+
+.transparent {
+  background: none !important;
+}
+
+.pink {
+  color: $pink;
+  .nav & {
+    a {
+      color: $pink;
+      i {
+        background: $pink;
+      }
+    }
+  }
+}
+
+.green {
+  color: $green;
+  .nav & {
+    a {
+      color: $green;
+      i {
+        background: $green;
+      }
+    }
+  }
+}
+
+.orange {
+  color: $orange;
+  .nav & {
+    a {
+      color: $orange;
+      i {
+        background: $orange;
+      }
+    }
+  }
+}
+
+.blue {
+  color: $blue;
+  .nav & {
+    a {
+      color: $blue;
+      i {
+        background: $blue;
+      }
+    }
+  }
+}
+
+.dark-blue {
+  color: $dark-blue;
+  .nav & {
+    a {
+      color: $dark-blue;
+      i {
+        background: $dark-blue;
+      }
+    }
+  }
+}
+
+.violet {
+  color: $violet;
+  .nav & {
+    a {
+      color: $violet;
+      i {
+        background: $violet;
+      }
+    }
+  }
+}
+
+.grey {
+  color: $text;
+  .nav & {
+    a {
+      color: $text;
+      i {
+        background: $text;
+      }
+    }
+  }
+}
+
+.black {
+  color: #000;
+  .nav & {
+    a {
+      color: #000;
+      i {
+        background: #000;
+      }
+    }
+  }
+}
+
+.white {
+  color: $white;
+  .nav & {
+    a {
+      color: $white;
+      i {
+        background: $white;
+      }
+    }
+  }
+}
+
+.bg-pink {
+  background: $pink;
+}
+.bg-green {
+  background: $green;
+}
+.bg-orange {
+  background: $orange;
+}
+.bg-blue {
+  background: $blue;
+}
+.bg-dark-blue {
+  background: $dark-blue;
+}
+.bg-violet {
+  background: $violet;
+}
+.bg-grey {
+  background: $text;
+}
+.bg-light-grey {
+  background: $light-grey;
+}
+.bg-white {
+  background: $white;
+}
+.bg-red {
+  background: rgb(204, 0, 0);
+}
+
+
+// Custom classes
+.inner {
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+}
+
+.inner--box {
+  padding: 2 * $base-spacing-unit 3 * $base-spacing-unit;
+  background: #FFF;
+  h2 {
+    margin: 2 * $base-spacing-unit 0;
+  }
+}
+
+.section-title {
+  @include font-size($h6-size, false);
+  text-transform: uppercase;
+  border-bottom: 1px solid $titles-small;
+  color: $titles-small;
+  display: inline-block;
+}
+
+.cta {
+  color: $pink;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include font-size($h6-size, false);
+  &:hover {
+    text-decoration: underline;
+  }
+  &:before {
+    margin-right: .5em;
+    border: 2px solid $pink;
+    display: inline-block;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    line-height: 1.8em;
+    @include border-radius(1000em);
+  }
+}
+
+.seperator {
+  position: relative;
+  display: inline-block;
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #fff;
+    width: 50%;
+    bottom: -.5em;
+    left: 25%;
+  }
+}
+
+.optional {
+  text-transform: none;
+  color: lighten($text,20%);
+}
+
+.soft-quarter           { padding:       $half-spacing-unit / 2 !important; }
+.soft-quarter--top      { padding-top:   $half-spacing-unit / 2 !important; }
+.soft-quarter--right    { padding-right: $half-spacing-unit / 2 !important; }
+.soft-quarter--bottom   { padding-bottom:$half-spacing-unit / 2 !important; }
+.soft-quarter--left     { padding-left:  $half-spacing-unit / 2 !important; }
+.soft-quarter--ends     { padding-top:   $half-spacing-unit / 2 !important; padding-bottom:$half-spacing-unit / 2 !important; }
+.soft-quarter--sides    { padding-right: $half-spacing-unit / 2 !important; padding-left:  $half-spacing-unit / 2 !important; }
+
+.push-quarter           { margin:       $half-spacing-unit / 2 !important; }
+.push-quarter--top      { margin-top:   $half-spacing-unit / 2 !important; }
+.push-quarter--right    { margin-right: $half-spacing-unit / 2 !important; }
+.push-quarter--bottom   { margin-bottom:$half-spacing-unit / 2 !important; }
+.push-quarter--left     { margin-left:  $half-spacing-unit / 2 !important; }
+.push-quarter--ends     { margin-top:   $half-spacing-unit / 2 !important; padding-bottom:$half-spacing-unit / 2 !important; }
+.push-quarter--sides    { margin-right: $half-spacing-unit / 2 !important; padding-left:  $half-spacing-unit / 2 !important; }
+
+// Separators
+.bd,
+.bd-top,
+.bd-right,
+.bd-bottom,
+.bd-left {
+  border-color: $light-grey;
+  border-style: solid;
+  border-width: 0;
+}
+.bd {
+  border-width: 1px;
+}
+.bd-top {
+  border-top-width: 1px;
+}
+.bd-right {
+  border-right-width: 1px;
+}
+.bd-bottom {
+  border-bottom-width: 1px;
+}
+.bd-left {
+  border-left-width: 1px;
+}
+.bd-pink {
+  border-color: $pink;
+}
+.bd-green {
+  border-color: $green;
+}
+.bd-orange {
+  border-color: $orange;
+}
+.bd-blue {
+  border-color: $blue;
+}
+.bd-violet {
+  border-color: $violet;
+}
+.bd-grey {
+  border-color: $text;
+}
+.bd-white {
+  border-color: $white;
+}
+.outlined {
+  outline: 4px solid $light-grey;
 }
