@@ -78,13 +78,13 @@
 
 .btn--blue {
   background-color: $blue;
-  border-bottom-color: darken($blue, 20%);
+  border-bottom-color: darken($blue, 5%);
   &:hover {
-    background-color: darken($blue, 10%);
-    border-bottom-color: darken($blue, 30%);
+    background-color: darken($blue, 5%);
+    border-bottom-color: darken($blue, 10%);
   }
   .icon {
-    border-right-color: darken($blue, 30%);
+    border-right-color: lighten($blue, 5%);
   }
 }
 
@@ -114,14 +114,14 @@
 }
 
 .btn--dark-blue {
-  background-color: lighten($dark-blue, 8%);
+  background-color: $dark-blue;
   border-bottom-color: darken($dark-blue, 10%);
   &:hover {
-    background-color: $dark-blue;
+    background-color: darken($dark-blue, 10%);
     border-bottom-color: darken($dark-blue, 20%);
   }
   .icon {
-    border-right-color: lighten($dark-blue,20%);
+    border-right-color: lighten($dark-blue,5%);
   }
 }
 
@@ -142,7 +142,7 @@
   }
   .icon {
     @include font-size($h6-size, false);
-    line-height: 3em;
+    line-height: 3.2em;
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -238,7 +238,7 @@
   @include user-select(none);
   input {
     display: none;
-    & + span {    
+    & + span {
       @include inline-block;
       @include single-transition(border, .15s);
       background: $white;
@@ -295,7 +295,7 @@
     height: 16px;
     margin-left: -8px;
     @include border-radius(0);
-    @include box-shadow(none);    
+    @include box-shadow(none);
   }
   .value {
     position: absolute;
@@ -359,7 +359,7 @@
         border: $bullet-spacing solid $white;
         @include border-radius(28px);
         @include single-transition(background, .2s);
-      }      
+      }
     }
     &.done {
       strong {
